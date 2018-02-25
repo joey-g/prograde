@@ -7,7 +7,6 @@
 *.o
 *.so
 
-
 # Packages #
 ############
 # it's better to unpack these files and commit the raw source
@@ -37,9 +36,11 @@
 ehthumbs.db
 Thumbs.db
 
-# package directories
+# Package directories
 node_modules
 jspm_packages
 
 # Serverless directories
 .serverless
+
+.env

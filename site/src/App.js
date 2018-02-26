@@ -7,7 +7,7 @@ const initialState = {
   contactEmail: '',
   contactMessage: '',
   sendingContact: false,
-  sendContactError: false
+  sendContactSuccess: true
 }
 
 class App extends Component {
@@ -33,10 +33,16 @@ class App extends Component {
       this.state.contactEmail,
       this.state.contactMessage
     ).then((responseJson) => {
-      this.setState({sendingContact: false});
+      this.setState({
+        sendingContact: false,
+        sendContactSuccess: true
+      });
     }).catch((error) => {
       console.log(error);
-      this.setState({sendingContact: false});
+      this.setState({
+        sendingContact: false,
+        sendContactSuccess: false
+      });
     });
   }
 
@@ -211,7 +217,7 @@ class App extends Component {
                   					<li><input type="reset" onClick={this.handleReset} className="style2" value="Reset" /></li>
                   				</ul>
                   			</div>
-                        {this.state.sendContactError &&
+                        {!this.state.sendContactSuccess &&
                         <div>{"Failed to send Contact. Please try again, or send me an e-mail!"}</div>
                         }
                   		</div>

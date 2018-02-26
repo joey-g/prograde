@@ -26,7 +26,7 @@ function buildResponse(msg, statusCode) {
   return {
     statusCode: statusCode,
     headers: {
-      'Access-Control-Allow-Origin': '*', // Required for CORS support to work
+      'Access-Control-Allow-Origin': '*' // Required for CORS support to work
     },
     body: JSON.stringify({
       message: msg
@@ -35,26 +35,36 @@ function buildResponse(msg, statusCode) {
 }
 
 module.exports.submitContact = (event, context, callback) => {
-  const AWS = require('aws-sdk');
-  const ses = new AWS.SES();
+  try {
+    const AWS = require('aws-sdk');
+    const ses = new AWS.SES();
 
-  const contactBody = JSON.parse(event.body);
-  const name = contactBody.name,
-    email = contactBody.email,
-    message = contactBody.message;
-
-  const emailParams = buildEmailParams(
-    `Name: ${name} -- Email: ${email} -- Message: ${message}`
-  );
-  let response = null;
-  ses.sendEmail(emailParams, (err, data) => {
-    if (err) {
-      console.log(err, err.stack);
-      response = buildResponse(err, 500);
-    } else {
-      console.log(data);
-      response = buildResponse(data, 200);
+    const contactBody = JSON.parse(event.body);
+    if (!contactBody) {
+      callback(null, buildResponse('Contact body is required.', 400));
     }
-    callback(null, response);
-  });
+    const name = contactBody.name,
+      email = contactBody.email,
+      message = contactBody.message;
+    const emailParams = buildEmailParams(
+      `Name: ${name}\n
+       Email: ${email}\n
+       Message: ${message}`
+    );
+    console.log(`Sending email with data: ${emailParams}`);
+
+    let response = null;
+    ses.sendEmail(emailParams, (err, data) => {
+      if (err) {
+        console.log(err, err.stack);
+        callback(null, buildResponse(err, 500));
+      } else {
+        console.log(data);
+        callback(null, buildResponse(data, 200));
+      }
+    });
+  } catch (err) {
+    console.log(err, err.stack);
+    callback(null, buildResponse(err.message, 500))
+  }
 };

@@ -1,7 +1,49 @@
 import React, { Component } from 'react';
+import ContactService from './services/ContactService';
 import './css/App.css';
 
+const initialState = {
+  contactName: '',
+  contactEmail: '',
+  contactMessage: '',
+  sendingContact: false,
+  sendContactError: false
+}
+
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = initialState;
+  }
+
+  handleChange = (e) => {
+    var change = {};
+    change[e.target.name] = e.target.value;
+    this.setState(change);
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    this.setState({sendingContact: true});
+
+    ContactService.submit(
+      this.state.contactName,
+      this.state.contactEmail,
+      this.state.contactMessage
+    ).then((responseJson) => {
+      this.setState({sendingContact: false});
+    }).catch((error) => {
+      console.log(error);
+      this.setState({sendingContact: false});
+    });
+  }
+
+  handleReset = (event) => {
+    this.setState(initialState);
+  }
+
   render() {
     return (
       <div className="body homepage">
@@ -138,27 +180,40 @@ class App extends Component {
 
                   {/* Contact Form */}
                   <section>
-                  	<form method="post" action="#">
+                  	<form onSubmit={this.handleSubmit}>
                   		<div className="row 50%">
                   			<div className="6u 12u(mobile)">
-                  				<input type="text" name="name" id="contact-name" placeholder="Name" />
+                  				<input type="text" value={this.state.contactName}
+                            onChange={this.handleChange}
+                            name="contactName" id="contact-name" placeholder="Name" />
                   			</div>
                   			<div className="6u 12u(mobile)">
-                  				<input type="text" name="email" id="contact-email" placeholder="Email" />
+                  				<input type="text" value={this.state.contactEmail}
+                            onChange={this.handleChange}
+                            name="contactEmail" id="contact-email" placeholder="Email" />
                   			</div>
                   		</div>
                   		<div className="row 50%">
                   			<div className="12u">
-                  				<textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
+                  				<textarea name="contactMessage" value={this.state.contactMessage}
+                            onChange={this.handleChange} id="contact-message"
+                            placeholder="Message" rows="4"></textarea>
                   			</div>
                   		</div>
                   		<div className="row">
                   			<div className="12u">
                   				<ul className="actions">
-                  					<li><input type="submit" className="style1" value="Send" /></li>
-                  					<li><input type="reset" className="style2" value="Reset" /></li>
+                            {
+                              (this.state.sendingContact)
+                                ? <li><input type="submit" className="style1" value="Sending..."/></li>
+                                : <li><input type="submit" className="style1" value="Send"/></li>
+                            }
+                  					<li><input type="reset" onClick={this.handleReset} className="style2" value="Reset" /></li>
                   				</ul>
                   			</div>
+                        {this.state.sendContactError &&
+                        <div>{"Failed to send Contact. Please try again, or send me an e-mail!"}</div>
+                        }
                   		</div>
                   	</form>
                   </section>

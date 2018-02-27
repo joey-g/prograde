@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Emoji from 'emoji-dictionary';
 import ContactService from './services/ContactService';
 import './css/App.css';
 
@@ -7,8 +8,8 @@ const initialState = {
   contactEmail: '',
   contactMessage: '',
   sendingContact: false,
-  sendContactSuccess: true
-}
+  sendContactSuccess: null
+};
 
 class App extends Component {
 
@@ -34,11 +35,15 @@ class App extends Component {
       this.state.contactMessage
     ).then((responseJson) => {
       this.setState({
+        contactName: '',
+        contactEmail: '',
+        contactMessage: '',
         sendingContact: false,
         sendContactSuccess: true
       });
     }).catch((error) => {
       console.log(error);
+      // Preserve form data on failed submits.
       this.setState({
         sendingContact: false,
         sendContactSuccess: false
@@ -85,9 +90,9 @@ class App extends Component {
                 Escape Velocity is a free responsive<br className="mobile-hide" /> site template by <a href="http://html5up.net" className="nobr">HTML5 UP</a>
     					</p>
     					<p className="style3">
-                {"It's "}<strong>responsive</strong>{", built on "}<strong>HTML5</strong>{" and "}<strong>CSS3</strong>
-                {" and released for free under the "}<a href="http://html5up.net/license"> Creative Commons Attribution 3.0 license</a>
-                {" so use it for any of your personal or commercial projects -- just be sure to credit us!"}
+                It&#39;s <strong>responsive</strong>, built on <strong>HTML5</strong> and <strong>CSS3</strong>&nbsp;
+                and released for free under the <a href="http://html5up.net/license"> Creative Commons Attribution 3.0 license</a>&nbsp;
+                so use it for any of your personal or commercial projects -- just be sure to credit us!
               </p>
     					<ul className="actions">
     						<li><a href="#" className="button style3 big">Proceed</a></li>
@@ -217,8 +222,13 @@ class App extends Component {
                   					<li><input type="reset" onClick={this.handleReset} className="style2" value="Reset" /></li>
                   				</ul>
                   			</div>
-                        {!this.state.sendContactSuccess &&
-                        <div>{"Failed to send Contact. Please try again, or send me an e-mail!"}</div>
+                        {this.state.sendContactSuccess != null && this.state.sendContactSuccess &&
+                        <div>Successfully sent Contact form.&nbsp;{Emoji.getUnicode('+1')}</div>
+                        }
+                        {this.state.sendContactSuccess != null && !this.state.sendContactSuccess &&
+                        <div>Failed to send Contact. Please try again, or e-mail me at:&nbsp;
+                          <a href="mailto:joey.gryder@gmail.com">joey.gryder@gmail.com</a>
+                        </div>
                         }
                   		</div>
                   	</form>

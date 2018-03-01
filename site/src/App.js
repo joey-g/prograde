@@ -5,83 +5,84 @@ import ContactService from './services/ContactService';
 
 class App extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
+	constructor(props) {
+		super(props);
+		this.state = {
 			contactName: '',
 			contactEmail: '',
 			contactMessage: '',
 			sendingContact: false,
 			sendContactSuccess: null,
-			sidebarVisible: false			
+			sidebarVisible: false
 		};
-  }
+	}
 
-  handleChange = (e) => {
-    var change = {};
-    change[e.target.name] = e.target.value;
-    this.setState(change);
-  }
+	handleChange = (e) => {
+		var change = {};
+		change[e.target.name] = e.target.value;
+		this.setState(change);
+	}
 
-  handleSubmit = (event) => {
-    event.preventDefault();
-    event.stopPropagation();
-    this.setState({sendingContact: true});
+	handleSubmit = (event) => {
+		event.preventDefault();
+		event.stopPropagation();
+		this.setState({ sendingContact: true });
 
-    ContactService.submit(
-      this.state.contactName,
-      this.state.contactEmail,
-      this.state.contactMessage
-    ).then((responseJson) => {
-      this.setState({
-        contactName: '',
-        contactEmail: '',
-        contactMessage: '',
-        sendingContact: false,
-        sendContactSuccess: true
-      });
-    }).catch((error) => {
-      console.log(error);
-      // Preserve form data on failed submits.
-      this.setState({
-        sendingContact: false,
-        sendContactSuccess: false
-      });
-    });
-  }
+		ContactService.submit(
+			this.state.contactName,
+			this.state.contactEmail,
+			this.state.contactMessage
+		).then((responseJson) => {
+			this.setState({
+				contactName: '',
+				contactEmail: '',
+				contactMessage: '',
+				sendingContact: false,
+				sendContactSuccess: true
+			});
+		}).catch((error) => {
+			console.log(error);
+			// Preserve form data on failed submits.
+			this.setState({
+				sendingContact: false,
+				sendContactSuccess: false
+			});
+		});
+	}
 
-  handleContactReset = (event) => {
+	handleContactReset = (event) => {
 		this.setState({
 			contactName: '',
 			contactEmail: '',
 			contactMessage: '',
 			sendingContact: false,
-			sendContactSuccess: null,	
+			sendContactSuccess: null,
 		})
 	}
-	
+
 	toggleVisibility = () => this.setState({ sidebarVisible: !this.state.sidebarVisible })
 
-  render() {
+	render() {
 
-    return (
-			<Sidebar.Pushable as={Segment}>
-				<Sidebar as={Menu} animation='push' width='thin' visible={this.state.sidebarVisible} 
-						icon='labeled' vertical inverted>
+		return (
+			<Sidebar.Pushable as={Segment}
+				style={{ border: 'none', borderRadius: 'unset', background: '#242730'}}>
+				<Sidebar as={Menu} animation='push' width='thin' visible={this.state.sidebarVisible}
+					icon='labeled' vertical inverted>
 					<Menu.Item name='home'>
-						<Icon name='home'/>
 						Home
 					</Menu.Item>
 					<Menu.Item name='gamepad'>
-						<Icon name='gamepad'/>
 						Portfolio
 					</Menu.Item>
 					<Menu.Item name='camera'>
-						<Icon name='camera'/>
 						Contact
 					</Menu.Item>
 				</Sidebar>
 				<Sidebar.Pusher>
+					<div id="titleBar">
+						<a href="#navPanel" className="toggle"></a>
+					</div>
 					<div className="body homepage">
 						<div id="page-wrapper">
 							{/* Header */}
@@ -241,19 +242,19 @@ class App extends Component {
 															<ul className="actions">
 																{
 																	(this.state.sendingContact)
-																		? <li><input type="submit" className="style1" value="Sending..."/></li>
-																		: <li><input type="submit" className="style1" value="Send"/></li>
+																		? <li><input type="submit" className="style1" value="Sending..." /></li>
+																		: <li><input type="submit" className="style1" value="Send" /></li>
 																}
 																<li><input type="reset" onClick={this.handleContactReset} className="style2" value="Reset" /></li>
 															</ul>
 														</div>
 														{this.state.sendContactSuccess != null && this.state.sendContactSuccess &&
-														<div>Successfully sent Contact form.&nbsp;{Emoji.getUnicode('+1')}</div>
+															<div>Successfully sent Contact form.&nbsp;{Emoji.getUnicode('+1')}</div>
 														}
 														{this.state.sendContactSuccess != null && !this.state.sendContactSuccess &&
-														<div>Failed to send Contact. Please try again, or e-mail me at:&nbsp;
+															<div>Failed to send Contact. Please try again, or e-mail me at:&nbsp;
 															<a href="mailto:joey.gryder@gmail.com">joey.gryder@gmail.com</a>
-														</div>
+															</div>
 														}
 													</div>
 												</form>
@@ -305,8 +306,8 @@ class App extends Component {
 					</div>
 				</Sidebar.Pusher>
 			</Sidebar.Pushable>
-    );
-  }
+		);
+	}
 }
 
 export default App;

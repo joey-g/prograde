@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Emoji from 'emoji-dictionary';
 import { Sidebar, Segment, Button, Menu, Image, Icon, Header } from 'semantic-ui-react'
 import ContactService from './services/ContactService';
-import './css/App.css';
 
 class App extends Component {
 
@@ -67,17 +66,18 @@ class App extends Component {
 
     return (
 			<Sidebar.Pushable as={Segment}>
-				<Sidebar as={Menu} animation='overlay' width='thin' visible={this.state.sidebarVisible} icon='labeled' vertical inverted>
+				<Sidebar as={Menu} animation='push' width='thin' visible={this.state.sidebarVisible} 
+						icon='labeled' vertical inverted>
 					<Menu.Item name='home'>
-						<Icon name='home' />
+						<Icon name='home'/>
 						Home
 					</Menu.Item>
 					<Menu.Item name='gamepad'>
-						<Icon name='gamepad' />
+						<Icon name='gamepad'/>
 						Portfolio
 					</Menu.Item>
 					<Menu.Item name='camera'>
-						<Icon name='camera' />
+						<Icon name='camera'/>
 						Contact
 					</Menu.Item>
 				</Sidebar>
@@ -91,7 +91,7 @@ class App extends Component {
 									{/* Logo */}
 									<div id="logo">
 										<h1><a href="index.html">Joey Gryder</a></h1>
-										<p>{'Sr. Software Engineer in Test - Charleston, SC'}</p>
+										<p>Sr. Software Engineer in Test - Charleston, SC</p>
 									</div>
 
 									{/* Nav */}

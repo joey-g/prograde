@@ -2119,19 +2119,19 @@ ol.default li {
   #navPanel .depth-0 {
     color: #fff;
   }
-  body.navPanel-visible #page-wrapper {
+  #body.navPanel-visible #page-wrapper {
     -moz-transform: translateX(275px);
     -webkit-transform: translateX(275px);
     -ms-transform: translateX(275px);
     transform: translateX(275px);
   }
-  body.navPanel-visible #titleBar {
+  #body.navPanel-visible #titleBar {
     -moz-transform: translateX(275px);
     -webkit-transform: translateX(275px);
     -ms-transform: translateX(275px);
     transform: translateX(275px);
   }
-  body.navPanel-visible #navPanel {
+  #body.navPanel-visible #navPanel {
     -moz-transform: translateX(0);
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);

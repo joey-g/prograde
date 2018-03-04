@@ -17,6 +17,7 @@ provider:
 functions:
   submitContact:
     handler: handler.submitContact
+    timeout: 15
     # The `events` block defines how to trigger the handler.submitContact code
     events:
       - http:

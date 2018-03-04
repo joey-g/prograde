@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
-import Emoji from 'emoji-dictionary';
-import ContactService from './services/ContactService';
+import Contact from './Contact';
 
 class App extends Component {
 
 	constructor(props) {
 		super(props);
 		this.state = {
-			contactName: '',
-			contactEmail: '',
-			contactMessage: '',
-			sendingContact: false,
-			sendContactSuccess: null,
 			sidebarVisible: false,
 			viewportWidth: 0,
 			viewportHeight: 0
@@ -31,59 +25,15 @@ class App extends Component {
 		this.setState({ viewportWidth: window.innerWidth, viewportHeight: window.innerHeight });
 	}
 
-	handleContactChange = (e) => {
-		var change = {};
-		change[e.target.name] = e.target.value;
-		this.setState(change);
-	}
+	toggleSidebarVisibility = () => this.setState({ sidebarVisible: !this.state.sidebarVisible })
 
-	handleContactSubmit = (event) => {
-		event.preventDefault();
-		event.stopPropagation();
-		this.setState({ sendingContact: true });
-
-		ContactService.submit(
-			this.state.contactName,
-			this.state.contactEmail,
-			this.state.contactMessage
-		).then((responseJson) => {
-			this.setState({
-				contactName: '',
-				contactEmail: '',
-				contactMessage: '',
-				sendingContact: false,
-				sendContactSuccess: true
-			});
-		}).catch((error) => {
-			console.log(error);
-			// Preserve form data on failed submits.
-			this.setState({
-				sendingContact: false,
-				sendContactSuccess: false
-			});
-		});
-	}
-
-	handleContactReset = (event) => {
-		this.setState({
-			contactName: '',
-			contactEmail: '',
-			contactMessage: '',
-			sendingContact: false,
-			sendContactSuccess: null,
-		})
-	}
-
-	toggleVisibility = () => this.setState({ sidebarVisible: !this.state.sidebarVisible })
-	
-	getMobileWidth = () => this.state.viewportWidth < 768 ? {width: '100%'} : {}
+	getMobileWidth = () => this.state.viewportWidth < 768 ? { width: '100%' } : {}
 
 	render() {
-
 		return (
 			<div id='body' className={this.state.sidebarVisible ? 'navPanel-visible' : ''}>
 				<div id="titleBar">
-					<a href="#navPanel" onClick={this.toggleVisibility} className="toggle"></a>
+					<a href="#navPanel" onClick={this.toggleSidebarVisibility} className="toggle"></a>
 				</div>
 
 				<div id="navPanel">
@@ -114,7 +64,7 @@ class App extends Component {
 								<nav id="nav">
 									<ul>
 										<li className="current"><a href="index.html">Home</a></li>
-										<li><a href="#highlights" onClick={this.toggleVisibility}>Portfolio</a></li>
+										<li><a href="#highlights" onClick={this.toggleSidebarVisibility}>Portfolio</a></li>
 										<li><a href="#footer">Contact</a></li>
 									</ul>
 								</nav>
@@ -133,7 +83,7 @@ class App extends Component {
 								<p className="style3">
 									It&#39;s <strong>responsive</strong>, built on <strong>HTML5</strong> and <strong>CSS3</strong>&nbsp;
 								and released for free under the <a href="http://html5up.net/license"> Creative Commons Attribution 3.0 license</a>&nbsp;
-											so use it for any of your personal or commercial projects -- just be sure to credit us!
+												so use it for any of your personal or commercial projects -- just be sure to credit us!
 							</p>
 								<ul className="actions">
 									<li><a href="#" className="button style3 big">Proceed</a></li>
@@ -225,88 +175,8 @@ class App extends Component {
 										Sed turpis tortor, tincidunt sed ornare in metus porttitor mollis nunc in aliquet.<br /> Nam pharetra laoreet imperdiet volutpat etiam consequat feugiat.
 								</p>
 								</header>
-
 								<hr />
-								<div className="row 150%">
-									<div className="6u 12u(mobile)" style={this.getMobileWidth()}>
-
-										{/* Contact Form */}
-										<section>
-											<form onSubmit={this.handleContactSubmit}>
-												<div className="row 50%">
-													<div className="6u 12u(mobile)" style={this.getMobileWidth()}>
-														<input type="text" value={this.state.contactName}
-															onChange={this.handleContactChange}
-															name="contactName" id="contact-name" placeholder="Name" />
-													</div>
-													<div className="6u 12u(mobile)" style={this.getMobileWidth()}>
-														<input type="text" value={this.state.contactEmail}
-															onChange={this.handleContactChange}
-															name="contactEmail" id="contact-email" placeholder="Email" />
-													</div>
-												</div>
-												<div className="row 50%">
-													<div className="12u">
-														<textarea name="contactMessage" value={this.state.contactMessage}
-															onChange={this.handleContactChange} id="contact-message"
-															placeholder="Message" rows="4"></textarea>
-													</div>
-												</div>
-												<div className="row">
-													<div className="12u">
-														<ul className="actions">
-															{
-																(this.state.sendingContact)
-																	? <li><input type="submit" className="style1" value="Sending..." /></li>
-																	: <li><input type="submit" className="style1" value="Send" /></li>
-															}
-															<li><input type="reset" onClick={this.handleContactReset} className="style2" value="Reset" /></li>
-														</ul>
-													</div>
-													{this.state.sendContactSuccess != null && this.state.sendContactSuccess &&
-														<div>Successfully sent Contact form.&nbsp;{Emoji.getUnicode('+1')}</div>
-													}
-													{this.state.sendContactSuccess != null && !this.state.sendContactSuccess &&
-														<div>Failed to send Contact. Please try again, or e-mail me at:&nbsp;
-													<a href="mailto:joey.gryder@gmail.com">joey.gryder@gmail.com</a>
-														</div>
-													}
-												</div>
-											</form>
-										</section>
-										{/* End Contact Form */}
-
-									</div>
-									<div className="6u 12u(mobile)" style={this.getMobileWidth()}>
-
-										{/* Contact Info */}
-										<section className="feature-list small">
-											<div className="row">
-												<div className="6u 12u(mobile)" style={this.getMobileWidth()}>
-													<section>
-														<h3 className="icon fa-envelope">Email</h3>
-														<p>
-															<a href="mailto:joey.gryder@gmail.com">joey.gryder@gmail.com</a>
-														</p>
-													</section>
-												</div>
-												<div className="6u 12u(mobile)" style={this.getMobileWidth()}>
-													<section>
-														<h3 className="icon fa-comment">Social</h3>
-														<p>
-															<a href="#">@untitled-corp</a><br />
-															<a href="#">linkedin.com/untitled</a><br />
-															<a href="#">facebook.com/untitled</a>
-														</p>
-													</section>
-												</div>
-											</div>
-										</section>
-										{/* End Contact Info */}
-
-									</div>
-								</div>
-
+								<Contact mobileWidth={this.getMobileWidth()}/>
 								<hr />
 							</div>
 							<div id="copyright">

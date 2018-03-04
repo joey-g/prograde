@@ -12,17 +12,32 @@ class App extends Component {
 			contactMessage: '',
 			sendingContact: false,
 			sendContactSuccess: null,
-			sidebarVisible: false
+			sidebarVisible: false,
+			viewportWidth: 0,
+			viewportHeight: 0
 		};
 	}
 
-	handleChange = (e) => {
+	componentDidMount() {
+		this.updateWindowDimensions();
+		window.addEventListener('resize', this.updateWindowDimensions);
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener('resize', this.updateWindowDimensions);
+	}
+
+	updateWindowDimensions = () => {
+		this.setState({ viewportWidth: window.innerWidth, viewportHeight: window.innerHeight });
+	}
+
+	handleContactChange = (e) => {
 		var change = {};
 		change[e.target.name] = e.target.value;
 		this.setState(change);
 	}
 
-	handleSubmit = (event) => {
+	handleContactSubmit = (event) => {
 		event.preventDefault();
 		event.stopPropagation();
 		this.setState({ sendingContact: true });
@@ -60,6 +75,8 @@ class App extends Component {
 	}
 
 	toggleVisibility = () => this.setState({ sidebarVisible: !this.state.sidebarVisible })
+	
+	getMobileWidth = () => this.state.viewportWidth < 768 ? {width: '100%'} : {}
 
 	render() {
 
@@ -116,7 +133,7 @@ class App extends Component {
 								<p className="style3">
 									It&#39;s <strong>responsive</strong>, built on <strong>HTML5</strong> and <strong>CSS3</strong>&nbsp;
 								and released for free under the <a href="http://html5up.net/license"> Creative Commons Attribution 3.0 license</a>&nbsp;
-										so use it for any of your personal or commercial projects -- just be sure to credit us!
+											so use it for any of your personal or commercial projects -- just be sure to credit us!
 							</p>
 								<ul className="actions">
 									<li><a href="#" className="button style3 big">Proceed</a></li>
@@ -144,13 +161,13 @@ class App extends Component {
 									{/* Feature List */}
 									<div className="feature-list">
 										<div className="row">
-											<div className="6u 12u(mobile)">
+											<div className="6u 12u(mobile)" style={this.getMobileWidth()}>
 												<section>
 													<h3 className="icon fa-comment">Mattis velit diam vulputate</h3>
 													<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
 												</section>
 											</div>
-											<div className="6u 12u(mobile)">
+											<div className="6u 12u(mobile)" style={this.getMobileWidth()}>
 												<section>
 													<h3 className="icon fa-refresh">Lorem ipsum dolor sit veroeros</h3>
 													<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
@@ -158,13 +175,13 @@ class App extends Component {
 											</div>
 										</div>
 										<div className="row">
-											<div className="6u 12u(mobile)">
+											<div className="6u 12u(mobile)" style={this.getMobileWidth()}>
 												<section>
 													<h3 className="icon fa-picture-o">Pretium phasellus justo lorem</h3>
 													<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
 												</section>
 											</div>
-											<div className="6u 12u(mobile)">
+											<div className="6u 12u(mobile)" style={this.getMobileWidth()}>
 												<section>
 													<h3 className="icon fa-cog">Tempus sed pretium orci</h3>
 													<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
@@ -172,13 +189,13 @@ class App extends Component {
 											</div>
 										</div>
 										<div className="row">
-											<div className="6u 12u(mobile)">
+											<div className="6u 12u(mobile)" style={this.getMobileWidth()}>
 												<section>
 													<h3 className="icon fa-wrench">Aliquam consequat et feugiat</h3>
 													<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
 												</section>
 											</div>
-											<div className="6u 12u(mobile)">
+											<div className="6u 12u(mobile)" style={this.getMobileWidth()}>
 												<section>
 													<h3 className="icon fa-check">Dolore laoreet aliquam mattis</h3>
 													<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
@@ -211,27 +228,27 @@ class App extends Component {
 
 								<hr />
 								<div className="row 150%">
-									<div className="6u 12u(mobile)">
+									<div className="6u 12u(mobile)" style={this.getMobileWidth()}>
 
 										{/* Contact Form */}
 										<section>
-											<form onSubmit={this.handleSubmit}>
+											<form onSubmit={this.handleContactSubmit}>
 												<div className="row 50%">
-													<div className="6u 12u(mobile)">
+													<div className="6u 12u(mobile)" style={this.getMobileWidth()}>
 														<input type="text" value={this.state.contactName}
-															onChange={this.handleChange}
+															onChange={this.handleContactChange}
 															name="contactName" id="contact-name" placeholder="Name" />
 													</div>
-													<div className="6u 12u(mobile)">
+													<div className="6u 12u(mobile)" style={this.getMobileWidth()}>
 														<input type="text" value={this.state.contactEmail}
-															onChange={this.handleChange}
+															onChange={this.handleContactChange}
 															name="contactEmail" id="contact-email" placeholder="Email" />
 													</div>
 												</div>
 												<div className="row 50%">
 													<div className="12u">
 														<textarea name="contactMessage" value={this.state.contactMessage}
-															onChange={this.handleChange} id="contact-message"
+															onChange={this.handleContactChange} id="contact-message"
 															placeholder="Message" rows="4"></textarea>
 													</div>
 												</div>
@@ -260,12 +277,12 @@ class App extends Component {
 										{/* End Contact Form */}
 
 									</div>
-									<div className="6u 12u(mobile)">
+									<div className="6u 12u(mobile)" style={this.getMobileWidth()}>
 
 										{/* Contact Info */}
 										<section className="feature-list small">
 											<div className="row">
-												<div className="6u 12u(mobile)">
+												<div className="6u 12u(mobile)" style={this.getMobileWidth()}>
 													<section>
 														<h3 className="icon fa-envelope">Email</h3>
 														<p>
@@ -273,7 +290,7 @@ class App extends Component {
 														</p>
 													</section>
 												</div>
-												<div className="6u 12u(mobile)">
+												<div className="6u 12u(mobile)" style={this.getMobileWidth()}>
 													<section>
 														<h3 className="icon fa-comment">Social</h3>
 														<p>

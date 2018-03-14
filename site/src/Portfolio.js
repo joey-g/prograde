@@ -12,12 +12,6 @@ class Portfolio extends Component {
                     <div id="header-wrapper" className="wrapper">
                         <div id="header">
 
-                            {/* Logo */}
-                            <div id="logo">
-                                <h1><a href="index.html">Joey Gryder</a></h1>
-                                <p>Sr. Software Engineer in Test - Charleston, SC</p>
-                            </div>
-
                             {/* Nav */}
                             <nav id="nav">
                                 <ul>
@@ -26,6 +20,11 @@ class Portfolio extends Component {
                                     <li><a href="#footer">Contact</a></li>
                                 </ul>
                             </nav>
+
+                            {/* Logo */}
+                            <div id="logo">
+                                <h1><a href="index.html">Joey Gryder</a></h1>
+                            </div>
                         </div>
                     </div>
                     {/* End Header */}
@@ -41,7 +40,7 @@ class Portfolio extends Component {
                                 </p>
                             </header>
                             <hr />
-                            <Contact mobileWidth={this.props.mobileWidth} />
+                            <Contact/>
                             <hr />
                         </div>
                         <div id="copyright">

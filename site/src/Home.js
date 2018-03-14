@@ -132,10 +132,10 @@ class Home extends Component {
                                 <h2>Get In Touch</h2>
                                 <p>
                                     Sed turpis tortor, tincidunt sed ornare in metus porttitor mollis nunc in aliquet.<br /> Nam pharetra laoreet imperdiet volutpat etiam consequat feugiat.
-                        </p>
+                                </p>
                             </header>
                             <hr />
-                            <Contact mobileWidth={this.props.mobileWidth} />
+                            <Contact />
                             <hr />
                         </div>
                         <div id="copyright">

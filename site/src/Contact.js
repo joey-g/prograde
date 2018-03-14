@@ -61,18 +61,18 @@ class Contact extends Component {
     render() {
         return (
             <div className="row 150%">
-                <div className="6u 12u(mobile)" style={this.props.mobileWidth}>
+                <div className="6u 12u(mobile)">
 
                     {/* Contact Form */}
                     <section>
                         <form onSubmit={this.handleContactSubmit}>
                             <div className="row 50%">
-                                <div className="6u 12u(mobile)" style={this.props.mobileWidth}>
+                                <div className="6u 12u(mobile)">
                                     <input type="text" value={this.state.contactName}
                                         onChange={this.handleContactChange}
                                         name="contactName" id="contact-name" placeholder="Name" />
                                 </div>
-                                <div className="6u 12u(mobile)" style={this.props.mobileWidth}>
+                                <div className="6u 12u(mobile)">
                                     <input type="text" value={this.state.contactEmail}
                                         onChange={this.handleContactChange}
                                         name="contactEmail" id="contact-email" placeholder="Email" />
@@ -110,12 +110,12 @@ class Contact extends Component {
                     {/* End Contact Form */}
 
                 </div>
-                <div className="6u 12u(mobile)" style={this.props.mobileWidth}>
+                <div className="6u 12u(mobile)">
 
                     {/* Contact Info */}
                     <section className="feature-list small">
                         <div className="row">
-                            <div className="6u 12u(mobile)" style={this.props.mobileWidth}>
+                            <div className="6u 12u(mobile)">
                                 <section>
                                     <h3 className="icon fa-envelope">Email</h3>
                                     <p>
@@ -123,13 +123,11 @@ class Contact extends Component {
                                     </p>
                                 </section>
                             </div>
-                            <div className="6u 12u(mobile)" style={this.props.mobileWidth}>
+                            <div className="6u 12u(mobile)">
                                 <section>
                                     <h3 className="icon fa-comment">Social</h3>
                                     <p>
                                         <a href="#">@untitled-corp</a><br />
-                                        <a href="#">linkedin.com/untitled</a><br />
-                                        <a href="#">facebook.com/untitled</a>
                                     </p>
                                 </section>
                             </div>

@@ -33,7 +33,7 @@ class Portfolio extends Component {
                     <div id="footer-wrapper" className="wrapper">
                         <div className="title">Contact</div>
                         <div id="footer" className="container">
-                            <Contact/>
+                            <Contact />
                             <hr />
                         </div>
                         <div id="copyright">
@@ -46,7 +46,7 @@ class Portfolio extends Component {
                     {/* End Footer */}
 
                 </div>
-            </div >
+            </div>
         );
     }
 }

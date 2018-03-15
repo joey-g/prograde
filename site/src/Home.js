@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import Contact from './Contact';
 import Portfolio from './Portfolio';
+import SiteArchImg from './images/joeygryder-com.png'
 
 class Home extends Component {
 
@@ -124,14 +125,59 @@ class Home extends Component {
                     </div>
                     {/* End Main */}
 
+                    {/* Highlights */}
+                    <div className="wrapper style3">
+                        <div className="title">The Endorsements</div>
+                        <div id="highlights" className="container">
+                            <div className="row 150%">
+                                <div className="4u 12u(mobile)">
+                                    <section className="highlight">
+                                        <a href="#" className="image featured"><img src={SiteArchImg} alt="joeygryder-com-arch" /></a>
+                                        <h3><a href="#">joeygryder.com</a></h3>
+                                        <p>
+                                            This site! Built with React, AWS, the Serverless Framework, and theming by
+                                            &nbsp;<a href="https://html5up.net/">HTML5 UP</a>
+                                        </p>
+                                        <ul className="actions">
+                                            <li><a href="#" className="button style1">Learn More</a></li>
+                                        </ul>
+                                    </section>
+                                </div>
+                                <div className="4u 12u(mobile)">
+                                    <section className="highlight">
+                                        <a href="#" className="image featured"><img src="images/pic03.jpg" alt="" /></a>
+                                        <h3><a href="#">Nisl adipiscing sed lorem</a></h3>
+                                        <p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+                                        <ul className="actions">
+                                            <li><a href="#" className="button style1">Learn More</a></li>
+                                        </ul>
+                                    </section>
+                                </div>
+                                <div className="4u 12u(mobile)">
+                                    <section className="highlight">
+                                        <a href="#" className="image featured"><img src="images/pic04.jpg" alt="" /></a>
+                                        <h3><a href="#">Mattis tempus lorem</a></h3>
+                                        <p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+                                        <ul className="actions">
+                                            <li><a href="#" className="button style1">Learn More</a></li>
+                                        </ul>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/* End Highlights */}
+
                     {/* Footer */}
                     <div id="footer-wrapper" className="wrapper">
-                        <div className="title">The Rest Of It</div>
+                        <div className="title">Contact</div>
                         <div id="footer" className="container">
                             <header className="style1">
-                                <h2>Get In Touch</h2>
+                                <h2>Get in touch</h2>
                                 <p>
-                                    Sed turpis tortor, tincidunt sed ornare in metus porttitor mollis nunc in aliquet.<br /> Nam pharetra laoreet imperdiet volutpat etiam consequat feugiat.
+                                    Interested in working together? Hit me up in the form below or shoot me 
+                                    an e-mail with more information about your project and I'll get back to
+                                    you as soon as I can!
                                 </p>
                             </header>
                             <hr />

@@ -6,7 +6,7 @@ class Portfolio extends Component {
 
     render() {
         return (
-            <div className="homepage">
+            <div className="details-page">
                 <div id="page-wrapper">
                     {/* Header */}
                     <div id="header-wrapper" className="wrapper">
@@ -31,15 +31,8 @@ class Portfolio extends Component {
 
                     {/* Footer */}
                     <div id="footer-wrapper" className="wrapper">
-                        <div className="title">The Rest Of It</div>
+                        <div className="title">Contact</div>
                         <div id="footer" className="container">
-                            <header className="style1">
-                                <h2>Get In Touch</h2>
-                                <p>
-                                    Sed turpis tortor, tincidunt sed ornare in metus porttitor mollis nunc in aliquet.<br /> Nam pharetra laoreet imperdiet volutpat etiam consequat feugiat.
-                                </p>
-                            </header>
-                            <hr />
                             <Contact/>
                             <hr />
                         </div>

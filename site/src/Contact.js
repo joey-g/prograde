@@ -125,9 +125,9 @@ class Contact extends Component {
                             </div>
                             <div className="6u 12u(mobile)">
                                 <section>
-                                    <h3 className="icon fa-comment">Social</h3>
+                                    <h3 className="icon fa-github">GitHub</h3>
                                     <p>
-                                        <a href="#">@untitled-corp</a><br />
+                                        <a href="https://github.com/joey-g">github.com/joey-g</a><br />
                                     </p>
                                 </section>
                             </div>

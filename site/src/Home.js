@@ -135,8 +135,8 @@ class Home extends Component {
                                         <a href="#" className="image featured"><img src={SiteArchImg} alt="joeygryder-com-arch" /></a>
                                         <h3><a href="#">joeygryder.com</a></h3>
                                         <p>
-                                            This site! Built with React, AWS, the Serverless Framework, and theming by
-                                            &nbsp;<a href="https://html5up.net/">HTML5 UP.</a>
+                                            The site you're viewing. Built with React, AWS, the Serverless Framework, and theming by
+                                            &nbsp;<a href="https://html5up.net/">HTML5 UP</a>.
                                         </p>
                                         <ul className="actions">
                                             <li><a href="#" className="button style1">Learn More</a></li>

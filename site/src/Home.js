@@ -127,14 +127,16 @@ class Home extends Component {
                             <div className="row 150%">
                                 <div className="4u 12u(mobile)">
                                     <section className="highlight">
-                                        <a href="#" className="image featured"><img src={SiteArchImg} alt="joeygryder-com-arch" /></a>
-                                        <h3><a href="#">joeygryder.com</a></h3>
+                                        <Link to="/personal-site" className="image featured">
+                                            <img src={SiteArchImg} alt="joeygryder-com-arch" />
+                                        </Link>
+                                        <h3><Link to="/personal-site">joeygryder.com</Link></h3>
                                         <p>
                                             The site you're viewing. Built with React, AWS, the Serverless Framework, and theming by
                                             &nbsp;<a href="https://html5up.net/">HTML5 UP</a>.
                                         </p>
                                         <ul className="actions">
-                                            <li><a href="#" className="button style1">Learn More</a></li>
+                                            <li><Link to="/personal-site" className="button style1">Learn More</Link></li>
                                         </ul>
                                     </section>
                                 </div>

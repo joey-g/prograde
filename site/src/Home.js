@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
+
 import Contact from './Contact';
+import Nav from './Nav';
 import PersonalSite from './PersonalSite';
 import SiteArchImg from './images/joeygryder-com.png'
 
@@ -20,14 +22,7 @@ class Home extends Component {
                                 <p>Sr. Software Engineer in Test - Charleston, SC</p>
                             </div>
 
-                            {/* Nav */}
-                            <nav id="nav">
-                                <ul>
-                                    <li className="current"><Link to="/">Home</Link></li>
-                                    <li><Link to="/personal-site">Portfolio</Link></li>
-                                    <li><a href="#footer">Contact</a></li>
-                                </ul>
-                            </nav>
+                            <Nav/>
                         </div>
                     </div>
                     {/* End Header */}

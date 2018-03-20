@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import { HashLink } from 'react-router-hash-link';
+
 import Contact from './Contact';
+import Nav from './Nav';
 import SiteArchImg from './images/joeygryder-com.png'
 
 class PersonalSite extends Component {
@@ -14,22 +15,7 @@ class PersonalSite extends Component {
                     <div id="header-wrapper" className="wrapper">
                         <div id="header">
 
-                            {/* Nav */}
-                            <nav id="nav">
-                                <ul>
-                                    <li className="current"><Link to="/">Home</Link></li>
-                                    <li>
-										<a href="#">Dropdown</a>
-										<ul>
-											<li><a href="#">Lorem ipsum</a></li>
-											<li><a href="#">Magna veroeros</a></li>
-											<li><a href="#">Etiam nisl</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><Link to="/personal-site">joeygryder.com</Link></li>
-                                    <li><a href="#footer">Contact</a></li>
-                                </ul>
-                            </nav>
+                            <Nav/>
 
                             {/* Logo */}
                             <div id="logo">

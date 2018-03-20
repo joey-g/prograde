@@ -1,1 +1,26 @@
 /* Prograde Styles */
+#nav .opener {
+    user-select: none; 
+    cursor: pointer; 
+    white-space: nowrap; 
+    opacity: 1;
+}
+
+#nav .dropotron {
+    user-select: none; 
+    position: absolute; 
+    z-index: 1000; 
+    opacity: 1;
+}
+
+#nav .dropotron.visible {
+    display: block;
+}
+
+.dropotron li {
+    white-space: nowrap;
+}
+
+.dropotron li a {
+    display: block;
+}

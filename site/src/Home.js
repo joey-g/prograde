@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import Contact from './Contact';
-import Portfolio from './Portfolio';
+import PersonalSite from './PersonalSite';
 import SiteArchImg from './images/joeygryder-com.png'
 
 class Home extends Component {
@@ -24,7 +24,7 @@ class Home extends Component {
                             <nav id="nav">
                                 <ul>
                                     <li className="current"><Link to="/">Home</Link></li>
-                                    <li><Link to="/portfolio">Portfolio</Link></li>
+                                    <li><Link to="/personal-site">Portfolio</Link></li>
                                     <li><a href="#footer">Contact</a></li>
                                 </ul>
                             </nav>
@@ -36,7 +36,7 @@ class Home extends Component {
                     <div id="intro-wrapper" className="wrapper style1">
                         <div className="title">The Introduction</div>
                         <section id="intro" className="container">
-                            <p className="style1">So in case you were wondering what this is all about ...</p>
+                            <p className="style1">Lorem ipsum dolor sit amet magna egestas morbi bibendum sed malesuada</p>
                             <p className="style2">
                                 Escape Velocity is a free responsive<br className="mobile-hide" /> site template by <a href="http://html5up.net" className="nobr">HTML5 UP</a>
                             </p>

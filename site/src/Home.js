@@ -5,6 +5,7 @@ import Contact from './Contact';
 import Nav from './Nav';
 import PersonalSite from './PersonalSite';
 import SiteArchImg from './images/joeygryder-com.png'
+import ReflexRunDetailsImg from './images/reflex-run-details.png'
 
 class Home extends Component {
 
@@ -122,7 +123,7 @@ class Home extends Component {
 
                     {/* Highlights */}
                     <div className="wrapper style3">
-                        <div className="title">The Endorsements</div>
+                        <div className="title">Projects</div>
                         <div id="highlights" className="container">
                             <div className="row 150%">
                                 <div className="4u 12u(mobile)">
@@ -134,6 +135,7 @@ class Home extends Component {
                                         <p>
                                             The site you're viewing. Built with React, AWS, the Serverless Framework, and theming by
                                             &nbsp;<a href="https://html5up.net/">HTML5 UP</a>.
+                                            <br/><br/>
                                         </p>
                                         <ul className="actions">
                                             <li><Link to="/personal-site" className="button style1">Learn More</Link></li>
@@ -142,11 +144,18 @@ class Home extends Component {
                                 </div>
                                 <div className="4u 12u(mobile)">
                                     <section className="highlight">
-                                        <a href="#" className="image featured"><img src="images/pic03.jpg" alt="" /></a>
-                                        <h3><a href="#">Nisl adipiscing sed lorem</a></h3>
-                                        <p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+                                        <Link to="/test-framework" className="image featured">
+                                            <img src={ReflexRunDetailsImg} alt="test-framework-details" />
+                                        </Link>
+                                        <h3><Link to="/test-framework">Automation Framework</Link></h3>
+                                        <p>
+                                            Testing framework powering all automated testing for
+                                            &nbsp;<a href="https://boomtownroi.com/">BoomTown ROI</a>. Built on Cucumber, 
+                                            &nbsp;<a href="https://saucelabs.com/">Sauce Labs</a>, Sinatra, React and Docker.
+                                            <br/>
+                                        </p>
                                         <ul className="actions">
-                                            <li><a href="#" className="button style1">Learn More</a></li>
+                                            <li><Link to="/test-framework" className="button style1">Learn More</Link></li>
                                         </ul>
                                     </section>
                                 </div>

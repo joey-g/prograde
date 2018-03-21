@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom';
 import Home from './Home';
 import PersonalSite from './PersonalSite';
+import Reflex from './Reflex';
 
 class App extends Component {
 
@@ -38,12 +39,19 @@ class App extends Component {
 									<span className="indent-1"></span>joeygryder.com
 								</Link>	
 							</li>
+							<li>
+								<Link to="/test-framework" className="link depth-1"
+									style={{ WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
+									<span className="indent-1"></span>Test Framework
+								</Link>	
+							</li>
 						</ul>
 					</nav>				
 				</div>
 
 				<Route exact path="/" component={Home} />
 				<Route exact path="/personal-site" component={PersonalSite} />
+				<Route exact path="/test-framework" component={Reflex} />
 			</div>
 		);
 	}

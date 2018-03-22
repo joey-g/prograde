@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom'
 
 import Contact from './Contact';
 import Nav from './Nav';
+import MobilePayImg from './images/mobile-pay-automation.png';
 import PersonalSite from './PersonalSite';
-import SiteArchImg from './images/joeygryder-com.png'
-import ReflexRunDetailsImg from './images/reflex-run-details.png'
+import SiteArchImg from './images/joeygryder-com.png';
+import ReflexRunDetailsImg from './images/reflex-run-details.png';
 
 class Home extends Component {
 
@@ -161,11 +162,18 @@ class Home extends Component {
                                 </div>
                                 <div className="4u 12u(mobile)">
                                     <section className="highlight">
-                                        <a href="#" className="image featured"><img src="images/pic04.jpg" alt="" /></a>
-                                        <h3><a href="#">Mattis tempus lorem</a></h3>
-                                        <p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet vulputate mattis amet laoreet lorem.</p>
+                                        <Link to="/mobile-automation" className="image featured">
+                                            <img src={MobilePayImg} alt="mobile-automation" />
+                                        </Link>
+                                        <h3><Link to="/mobile-automation">Mobile Automation</Link></h3>
+                                        <p>
+                                            Hybrid app automation for&nbsp;<a href="https://www.blackbaud.com/">Blackbaud</a>'s 
+                                            Mobile Payments platform. Built with &nbsp;<a href="http://appium.io/">Appium</a>,
+                                            &nbsp;Selenium Grid, and NodeJS.
+                                            <br/><br/>
+                                        </p>
                                         <ul className="actions">
-                                            <li><a href="#" className="button style1">Learn More</a></li>
+                                            <li><Link to="/mobile-automation" className="button style1">Learn More</Link></li>
                                         </ul>
                                     </section>
                                 </div>

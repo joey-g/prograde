@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom'
 
 import Contact from './Contact';
 import Nav from './Nav';
-import ReflexRunDetailsImg from './images/reflex-run-details.png'
-import SiteArchImg from './images/joeygryder-com.png'
+import MobilePayImg from './images/mobile-pay-automation.png';
+import ReflexRunDetailsImg from './images/reflex-run-details.png';
+import SiteArchImg from './images/joeygryder-com.png';
 
 class PersonalSite extends Component {
 
@@ -91,13 +92,17 @@ class PersonalSite extends Component {
                                     <div className="6u 12u(mobile)">
                                         <section className="box">
                                             <header>
-                                                <h2>Magna pulvinar tempus</h2>
+                                                <h2>Mobile Automation</h2>
                                             </header>
-                                            <a href="#" className="image featured"><img src="images/pic06.jpg" alt="" /></a>
-                                            <p>Rutrum bibendum. Proin pellentesque diam non ligula commodo tempor. Vivamus
-                                            eget urna nibh. Curabitur non fringilla nisl. Donec accumsan interdum nisi, quis
-                                            tempus.</p>
-                                            <a href="#" className="button style1">More</a>
+                                            <Link to="/mobile-automation" className="image featured">
+                                                <img src={MobilePayImg} alt="mobile-automation" />
+                                            </Link>
+                                            <p>
+                                                Hybrid app automation for&nbsp;<a href="https://www.blackbaud.com/">Blackbaud</a>'s 
+                                                Mobile Payments platform. Built with &nbsp;<a href="http://appium.io/">Appium</a>,
+                                                &nbsp;Selenium Grid, and NodeJS.
+                                            </p>
+                                            <Link to="/mobile-automation" className="button style1">Learn More</Link>
                                         </section>
                                     </div>
                                 </div>

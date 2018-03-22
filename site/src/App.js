@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
 import Home from './Home';
+import MobilePay from './MobilePay';
 import PersonalSite from './PersonalSite';
 import Reflex from './Reflex';
 
@@ -28,28 +29,35 @@ class App extends Component {
 							style={{ WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
 							<span className="indent-0"></span>Home
 						</Link>
-						<Link to="/personal-site" className="link depth-0"
+						<a href="javascript:void(0)" className="link depth-0"
 							style={{ WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
 							<span className="indent-0"></span>Portfolio
-						</Link>
+						</a>
 						<ul>
 							<li>
 								<Link to="/personal-site" className="link depth-1"
 									style={{ WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
 									<span className="indent-1"></span>joeygryder.com
-								</Link>	
+								</Link>
 							</li>
 							<li>
 								<Link to="/test-framework" className="link depth-1"
 									style={{ WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
 									<span className="indent-1"></span>Test Framework
-								</Link>	
+								</Link>
+							</li>
+							<li>
+								<Link to="/mobile-automation" className="link depth-1"
+									style={{ WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
+									<span className="indent-1"></span>Mobile Automation
+								</Link>
 							</li>
 						</ul>
 					</nav>				
 				</div>
 
 				<Route exact path="/" component={Home} />
+				<Route exact path="/mobile-automation" component={MobilePay} />
 				<Route exact path="/personal-site" component={PersonalSite} />
 				<Route exact path="/test-framework" component={Reflex} />
 			</div>

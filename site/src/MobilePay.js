@@ -7,7 +7,7 @@ import MobilePayImg from './images/mobile-pay-automation.png';
 import ReflexRunDetailsImg from './images/reflex-run-details.png';
 import SiteArchImg from './images/joeygryder-com.png';
 
-class Reflex extends Component {
+class MobilePay extends Component {
 
     render() {
         return (
@@ -29,7 +29,7 @@ class Reflex extends Component {
 
                     {/* Main */}
                     <div className="wrapper style2">
-                        <div className="title">Test Framework</div>
+                        <div className="title">Mobile Automation</div>
                         <div id="main" className="container">
                             
                             {/* Content */}
@@ -40,7 +40,7 @@ class Reflex extends Component {
                                         <p>Tempus feugiat veroeros sed nullam dolore</p>
                                     </header>
                                     <a href="#" className="image featured">
-                                        <img src={ReflexRunDetailsImg} alt="test-framework-details" />
+                                        <img src={MobilePayImg} alt="mobile-automation" />
                                     </a>
                                     <p>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget.
                                     odio eleifend. Duis commodo fringilla commodo. Aliquam erat volutpat. Vestibulum
@@ -91,17 +91,17 @@ class Reflex extends Component {
                                     <div className="6u 12u(mobile)">
                                         <section className="box">
                                             <header>
-                                                <h2>Mobile Automation</h2>
+                                                <h2>Automation Framework</h2>
                                             </header>
-                                            <Link to="/mobile-automation" className="image featured">
-                                                <img src={MobilePayImg} alt="mobile-automation" />
+                                            <Link to="/test-framework" className="image featured">
+                                                <img src={ReflexRunDetailsImg} alt="test-framework-details" />
                                             </Link>
                                             <p>
-                                                Hybrid app automation for&nbsp;<a href="https://www.blackbaud.com/">Blackbaud</a>'s 
-                                                Mobile Payments platform. Built with &nbsp;<a href="http://appium.io/">Appium</a>,
-                                                &nbsp;Selenium Grid, and NodeJS.
+                                                Testing framework powering all automated testing for
+                                                &nbsp;<a href="https://boomtownroi.com/">BoomTown ROI</a>. Built on Cucumber, 
+                                                &nbsp;<a href="https://saucelabs.com/">Sauce Labs</a>, Sinatra, React and Docker.
                                             </p>
-                                            <Link to="/mobile-automation" className="button style1">Learn More</Link>
+                                            <Link to="/test-framework" className="button style1">Learn More</Link>
                                         </section>
                                     </div>
                                 </div>
@@ -134,4 +134,4 @@ class Reflex extends Component {
     }
 }
 
-export default Reflex;
+export default MobilePay;

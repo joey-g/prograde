@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
-import Home from './Home';
-import MobilePay from './MobilePay';
-import PersonalSite from './PersonalSite';
-import Reflex from './Reflex';
+import Home from './components/Home';
+import MobilePay from './components/MobilePay';
+import PersonalSite from './components/PersonalSite';
+import Reflex from './components/Reflex';
 
 class App extends Component {
 

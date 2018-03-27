@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Route, BrowserRouter } from 'react-router-dom';
 
 import App from './App';
-import ScrollToTop from './ScrollToTop';
+import ScrollToTop from './components/ScrollToTop';
 import registerServiceWorker from './registerServiceWorker';
 import withTracker from './withTracker';
 

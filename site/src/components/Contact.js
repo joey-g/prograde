@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Emoji from 'emoji-dictionary';
-import ContactService from './services/ContactService';
+import ContactService from '../services/ContactService';
 
 class Contact extends Component {
 

@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 
 import Contact from './Contact';
 import Nav from './Nav';
-import MobilePayImg from './images/mobile-pay-automation.png';
-import ReflexRunDetailsImg from './images/reflex-run-details.png';
-import SiteArchImg from './images/joeygryder-com.png';
+import MobilePayImg from '../images/mobile-pay-automation.png';
+import ReflexRunDetailsImg from '../images/reflex-run-details.png';
+import SiteArchImg from '../images/joeygryder-com.png';
 
 class MobilePay extends Component {
 

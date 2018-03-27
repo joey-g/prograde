@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 
 import Contact from './Contact';
 import Nav from './Nav';
-import MobilePayImg from './images/mobile-pay-automation.png';
-import ReflexRunDetailsImg from './images/reflex-run-details.png';
-import SiteArchImg from './images/joeygryder-com.png';
+import MobilePayImg from '../images/mobile-pay-automation.png';
+import ReflexRunDetailsImg from '../images/reflex-run-details.png';
+import SiteArchImg from '../images/joeygryder-com.png';
 
-class PersonalSite extends Component {
+class Reflex extends Component {
 
     render() {
         return (
@@ -29,7 +29,7 @@ class PersonalSite extends Component {
 
                     {/* Main */}
                     <div className="wrapper style2">
-                        <div className="title">joeygryder.com</div>
+                        <div className="title">Test Framework</div>
                         <div id="main" className="container">
                             
                             {/* Content */}
@@ -40,7 +40,7 @@ class PersonalSite extends Component {
                                         <p>Tempus feugiat veroeros sed nullam dolore</p>
                                     </header>
                                     <a href="#" className="image featured">
-                                        <img src={SiteArchImg} alt="joeygryder-com-arch" />
+                                        <img src={ReflexRunDetailsImg} alt="test-framework-details" />
                                     </a>
                                     <p>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget.
                                     odio eleifend. Duis commodo fringilla commodo. Aliquam erat volutpat. Vestibulum
@@ -76,17 +76,16 @@ class PersonalSite extends Component {
                                     <div className="6u 12u(mobile)">
                                         <section className="box">
                                             <header>
-                                                <h2>Automation Framework</h2>
+                                                <h2>joeygryder.com</h2>
                                             </header>
-                                            <Link to="/test-framework" className="image featured">
-                                                <img src={ReflexRunDetailsImg} alt="test-framework-details" />
+                                            <Link to="/personal-site" className="image featured">
+                                                <img src={SiteArchImg} alt="joeygryder-com-arch" />
                                             </Link>
                                             <p>
-                                                Testing framework powering all automated testing for
-                                                &nbsp;<a href="https://boomtownroi.com/">BoomTown ROI</a>. Built on Cucumber, 
-                                                &nbsp;<a href="https://saucelabs.com/">Sauce Labs</a>, Sinatra, React and Docker.
+                                                The site you're viewing. Built with React, AWS, the Serverless Framework, and theming by
+                                                &nbsp;<a href="https://html5up.net/">HTML5 UP</a>.
                                             </p>
-                                            <Link to="/test-framework" className="button style1">Learn More</Link>
+                                            <Link to="/personal-site" className="button style1">Learn More</Link>
                                         </section>
                                     </div>
                                     <div className="6u 12u(mobile)">
@@ -135,4 +134,4 @@ class PersonalSite extends Component {
     }
 }
 
-export default PersonalSite;
+export default Reflex;

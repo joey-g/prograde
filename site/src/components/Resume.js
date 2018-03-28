@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 import Contact from './Contact';
 import Nav from './Nav';
@@ -14,7 +14,7 @@ class Resume extends Component {
                     <div id="header-wrapper" className="wrapper">
                         <div id="header">
 
-                            <Nav/>
+                            <Nav />
 
                             {/* Logo */}
                             <div id="logo">
@@ -28,7 +28,7 @@ class Resume extends Component {
                     <div className="wrapper style2">
                         <div className="title">joeygryder.com</div>
                         <div id="main" className="container">
-                            
+
                             {/* Content */}
                             <div id="content">
                                 

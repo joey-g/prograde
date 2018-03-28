@@ -25,7 +25,7 @@ class Nav extends Component {
                             <li><Link to="/mobile-automation">Mobile Automation</Link></li>
                         </ul>
                     </li>
-                    <li><a href="#footer">Contact</a></li>
+                    <li><Link to="/resume">Resumé</Link></li>
                 </ul>
             </nav>
         );

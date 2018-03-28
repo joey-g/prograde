@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
+
 import Home from './components/Home';
 import MobilePay from './components/MobilePay';
 import PersonalSite from './components/PersonalSite';
 import Reflex from './components/Reflex';
+import Resume from './components/Resume';
 
 class App extends Component {
 
@@ -53,6 +55,10 @@ class App extends Component {
 								</Link>
 							</li>
 						</ul>
+						<Link to="/resume" className="link depth-0"
+							style={{ WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
+							<span className="indent-0"></span>Resumé
+						</Link>
 					</nav>				
 				</div>
 
@@ -60,6 +66,7 @@ class App extends Component {
 				<Route exact path="/mobile-automation" component={MobilePay} />
 				<Route exact path="/personal-site" component={PersonalSite} />
 				<Route exact path="/test-framework" component={Reflex} />
+				<Route exact path="/resume" component={Resume} />
 			</div>
 		);
 	}

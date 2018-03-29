@@ -1,12 +1,25 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { Document, Page } from 'react-pdf';
 
+import ResumePDF from '../images/resume.pdf';
 import Contact from './Contact';
 import Nav from './Nav';
 
 class Resume extends Component {
 
+    state = {
+        numPages: null,
+        pageNumber: 1,
+    }
+
+    onDocumentLoad = (numPages) => {
+        this.setState({ numPages });
+    }
+
     render() {
+        const { pageNumber, numPages } = this.state;
+
         return (
             <div className="details-page">
                 <div id="page-wrapper">
@@ -26,12 +39,15 @@ class Resume extends Component {
 
                     {/* Main */}
                     <div className="wrapper style2">
-                        <div className="title">joeygryder.com</div>
+                        <div className="title">Resumé</div>
                         <div id="main" className="container">
 
                             {/* Content */}
                             <div id="content">
-                                
+                                <Document file={ResumePDF} loading={'Loading resumé...'}
+                                    onLoadSuccess={this.onDocumentLoad}>
+                                    <Page pageNumber={pageNumber} />
+                                </Document>
                             </div>
                             {/* End Content */}
 

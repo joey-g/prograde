@@ -4,6 +4,9 @@
 	Escape Velocity by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+	NOTE: Leaving this in /public and loading the Old Fashioned Way™, due to
+	https://github.com/webpack-contrib/css-loader/issues/459
 */
 
 /* Reset */

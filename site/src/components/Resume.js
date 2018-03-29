@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { Document, Page } from 'react-pdf';
 
 import ResumePDF from '../images/resume.pdf';
@@ -8,17 +7,29 @@ import Nav from './Nav';
 
 class Resume extends Component {
 
-    state = {
-        numPages: null,
-        pageNumber: 1,
+    constructor(props) {
+        super(props)
+        this.state = {
+            pageNumber: 1,
+            width: null
+        }
     }
 
-    onDocumentLoad = (numPages) => {
-        this.setState({ numPages });
+    componentDidMount() {
+        this.setDivSize();
+        window.addEventListener("resize", this.setDivSize);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("resize", this.setDivSize);
+    }
+
+    setDivSize = () => {
+        this.setState({ width: this.pdfWrapper.getBoundingClientRect().width });
     }
 
     render() {
-        const { pageNumber, numPages } = this.state;
+        const { pageNumber, width } = this.state;
 
         return (
             <div className="details-page">
@@ -44,10 +55,13 @@ class Resume extends Component {
 
                             {/* Content */}
                             <div id="content">
-                                <Document file={ResumePDF} loading={'Loading resumé...'}
-                                    onLoadSuccess={this.onDocumentLoad}>
-                                    <Page pageNumber={pageNumber} />
-                                </Document>
+                                <div id="pdfWrapper" style={{ width: "100%" }}
+                                    ref={(ref) => this.pdfWrapper = ref}>
+                                    <Document file={ResumePDF} loading={'Loading resumé...'}
+                                        onLoadSuccess={this.onDocumentLoad}>
+                                        <Page width={width} pageNumber={pageNumber} />
+                                    </Document>
+                                </div>
                             </div>
                             {/* End Content */}
 

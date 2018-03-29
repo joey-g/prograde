@@ -10,6 +10,7 @@ class Resume extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            documentLoaded: false,
             pageNumber: 1,
             width: null
         }
@@ -28,8 +29,12 @@ class Resume extends Component {
         this.setState({ width: this.pdfWrapper.getBoundingClientRect().width });
     }
 
+    onDocumentLoad = (pdf) => {
+        this.setState({ documentLoaded: true });
+    }
+
     render() {
-        const { pageNumber, width } = this.state;
+        const { documentLoaded, pageNumber, width } = this.state;
 
         return (
             <div className="details-page">
@@ -61,6 +66,14 @@ class Resume extends Component {
                                         onLoadSuccess={this.onDocumentLoad}>
                                         <Page width={width} pageNumber={pageNumber} />
                                     </Document>
+                                    {documentLoaded && 
+                                    <ul className="actions actions-centered">
+                                        <li>
+                                            <a href={ResumePDF} download="joeygryder-resume.pdf" 
+                                                className="button style1">Download PDF</a>
+                                        </li>
+                                    </ul>
+                                    }
                                 </div>
                             </div>
                             {/* End Content */}

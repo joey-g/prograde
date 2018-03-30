@@ -29,7 +29,7 @@ class Reflex extends Component {
 
                     {/* Main */}
                     <div className="wrapper style2">
-                        <div className="title">Test Framework</div>
+                        <div className="title">Testing Framework</div>
                         <div id="main" className="container">
                             
                             {/* Content */}
@@ -39,9 +39,9 @@ class Reflex extends Component {
                                         <h2>Lorem ipsum dolor sit amet magna egestas morbi bibendum sed malesuada</h2>
                                         <p>Tempus feugiat veroeros sed nullam dolore</p>
                                     </header>
-                                    <a href="#" className="image featured">
-                                        <img src={ReflexRunDetailsImg} alt="test-framework-details" />
-                                    </a>
+                                    <div className="image featured">
+                                        <img src={ReflexRunDetailsImg} alt="testing-framework-details" />
+                                    </div>
                                     <p>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget.
                                     odio eleifend. Duis commodo fringilla commodo. Aliquam erat volutpat. Vestibulum
                                     facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam

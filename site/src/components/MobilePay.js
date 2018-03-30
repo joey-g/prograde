@@ -39,9 +39,9 @@ class MobilePay extends Component {
                                         <h2>Lorem ipsum dolor sit amet magna egestas morbi bibendum sed malesuada</h2>
                                         <p>Tempus feugiat veroeros sed nullam dolore</p>
                                     </header>
-                                    <a href="#" className="image featured">
+                                    <div className="image featured">
                                         <img src={MobilePayImg} alt="mobile-automation" />
-                                    </a>
+                                    </div>
                                     <p>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget.
                                     odio eleifend. Duis commodo fringilla commodo. Aliquam erat volutpat. Vestibulum
                                     facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
@@ -93,15 +93,15 @@ class MobilePay extends Component {
                                             <header>
                                                 <h2>Automation Framework</h2>
                                             </header>
-                                            <Link to="/test-framework" className="image featured">
-                                                <img src={ReflexRunDetailsImg} alt="test-framework-details" />
+                                            <Link to="/testing-framework" className="image featured">
+                                                <img src={ReflexRunDetailsImg} alt="testing-framework-details" />
                                             </Link>
                                             <p>
                                                 Testing framework powering all automated testing for
                                                 &nbsp;<a href="https://boomtownroi.com/">BoomTown ROI</a>. Built on Cucumber, 
                                                 &nbsp;<a href="https://saucelabs.com/">Sauce Labs</a>, Sinatra, React and Docker.
                                             </p>
-                                            <Link to="/test-framework" className="button style1">Learn More</Link>
+                                            <Link to="/testing-framework" className="button style1">Learn More</Link>
                                         </section>
                                     </div>
                                 </div>

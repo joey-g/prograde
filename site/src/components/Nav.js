@@ -21,7 +21,7 @@ class Nav extends Component {
                         <a href="javascript:void(0)">Portfolio</a>
                         <ul className={"dropotron level-0 center" + (this.state.dropdownVisible ? ' visible' : '')}>
                             <li><Link to="/personal-site">joeygryder.com</Link></li>
-                            <li><Link to="/test-framework">Test Framework</Link></li>
+                            <li><Link to="/testing-framework">Testing Framework</Link></li>
                             <li><Link to="/mobile-automation">Mobile Automation</Link></li>
                         </ul>
                     </li>

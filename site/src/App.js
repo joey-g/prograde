@@ -43,9 +43,9 @@ class App extends Component {
 								</Link>
 							</li>
 							<li>
-								<Link to="/test-framework" className="link depth-1"
+								<Link to="/testing-framework" className="link depth-1"
 									style={{ WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
-									<span className="indent-1"></span>Test Framework
+									<span className="indent-1"></span>Testing Framework
 								</Link>
 							</li>
 							<li>
@@ -65,7 +65,7 @@ class App extends Component {
 				<Route exact path="/" component={Home} />
 				<Route exact path="/mobile-automation" component={MobilePay} />
 				<Route exact path="/personal-site" component={PersonalSite} />
-				<Route exact path="/test-framework" component={Reflex} />
+				<Route exact path="/testing-framework" component={Reflex} />
 				<Route exact path="/resume" component={Resume} />
 			</div>
 		);

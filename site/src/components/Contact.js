@@ -90,7 +90,7 @@ class Contact extends Component {
                                     <ul className="actions">
                                         {
                                             this.state.sendingContact
-                                                ? <li><input type="submit" className="style1" value="Sending..." /></li>
+                                                ? <li><input disabled type="submit" className="style1" value="Sending..." /></li>
                                                 : <li><input type="submit" className="style1" value="Send" /></li>
                                         }
                                         <li><input type="reset" onClick={this.handleContactReset} className="style2" value="Reset" /></li>

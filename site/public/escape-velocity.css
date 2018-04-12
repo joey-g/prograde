@@ -1717,6 +1717,11 @@ ol.default {
 	text-transform: uppercase;
 }
 
+#logo img {
+	width: 10em;
+	margin-bottom: 5px;
+}
+
 /* Intro */
 
 #intro > .style2 {
@@ -1992,6 +1997,8 @@ ol.default {
 
 		.homepage #logo {
 			margin-top: -1em;
+			height: 15em;
+			top: 30%;
 		}
 
 		#logo h1 {

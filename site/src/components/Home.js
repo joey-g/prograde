@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 
 import Contact from './Contact';
 import Nav from './Nav';
-import PersonalSite from './PersonalSite';
+
+import HeadshotImg from '../images/headshot.png';
 import MobilePayImg from '../images/mobile-pay-automation.png';
 import SiteArchImg from '../images/joeygryder-com.png';
 import ReflexRunDetailsImg from '../images/reflex-run-details.png';
@@ -18,13 +19,14 @@ class Home extends Component {
                     <div id="header-wrapper" className="wrapper">
                         <div id="header">
 
+                            <Nav />
+
                             {/* Logo */}
                             <div id="logo">
+                                <img src={HeadshotImg} alt="headshot" />
                                 <h1>Joey Gryder</h1>
                                 <p>Sr. Software Engineer in Test - Charleston, SC</p>
                             </div>
-
-                            <Nav/>
                         </div>
                     </div>
                     {/* End Header */}
@@ -50,11 +52,6 @@ class Home extends Component {
                     <div className="wrapper style2">
                         <div className="title">The Details</div>
                         <div id="main" className="container">
-
-                            {/* Image */}
-                            <div className="image featured">
-                                <img src="images/pic01.jpg" alt="" />
-                            </div>
 
                             {/* Features */}
                             <section id="features">
@@ -129,7 +126,7 @@ class Home extends Component {
                                         <p>
                                             The site you're viewing. Built with React, AWS, the Serverless Framework, and theming by
                                             &nbsp;<a href="https://html5up.net/">HTML5 UP</a>.
-                                            <br/><br/>
+                                            <br /><br />
                                         </p>
                                         <ul className="actions">
                                             <li><Link to="/personal-site" className="button style1">Learn More</Link></li>
@@ -144,9 +141,9 @@ class Home extends Component {
                                         <h3><Link to="/testing-framework">Automation Framework</Link></h3>
                                         <p>
                                             Testing framework powering all automated testing for
-                                            &nbsp;<a href="https://boomtownroi.com/">BoomTown ROI</a>. Built on Cucumber, 
+                                            &nbsp;<a href="https://boomtownroi.com/">BoomTown ROI</a>. Built on Cucumber,
                                             &nbsp;<a href="https://saucelabs.com/">Sauce Labs</a>, Sinatra, React and Docker.
-                                            <br/>
+                                            <br />
                                         </p>
                                         <ul className="actions">
                                             <li><Link to="/testing-framework" className="button style1">Learn More</Link></li>
@@ -160,10 +157,10 @@ class Home extends Component {
                                         </Link>
                                         <h3><Link to="/mobile-automation">Mobile Automation</Link></h3>
                                         <p>
-                                            Hybrid app automation for&nbsp;<a href="https://www.blackbaud.com/">Blackbaud</a>'s 
+                                            Hybrid app automation for&nbsp;<a href="https://www.blackbaud.com/">Blackbaud</a>'s
                                             Mobile Payments platform. Built with &nbsp;<a href="http://appium.io/">Appium</a>,
                                             &nbsp;Selenium Grid, and NodeJS.
-                                            <br/><br/>
+                                            <br /><br />
                                         </p>
                                         <ul className="actions">
                                             <li><Link to="/mobile-automation" className="button style1">Learn More</Link></li>
@@ -182,7 +179,7 @@ class Home extends Component {
                             <header className="style1">
                                 <h2>Get in touch</h2>
                                 <p>
-                                    Interested in working together? Hit me up in the form below or shoot me 
+                                    Interested in working together? Hit me up in the form below or shoot me
                                     an e-mail with more information about your project and I'll get back to
                                     you as soon as I can!
                                 </p>

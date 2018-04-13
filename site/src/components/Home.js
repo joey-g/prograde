@@ -33,84 +33,31 @@ class Home extends Component {
 
                     {/* Intro */}
                     <div id="intro-wrapper" className="wrapper style1">
-                        <div className="title">The Introduction</div>
+                        <div className="title">Introduction</div>
                         <section id="intro" className="container">
-                            <p className="style1">Lorem ipsum dolor sit amet magna egestas morbi bibendum sed malesuada</p>
-                            <p className="style2">
-                                Escape Velocity is a free responsive<br className="mobile-hide" /> site template by <a href="http://html5up.net" className="nobr">HTML5 UP</a>
+                            <p className="style3" style={{marginBottom: "2em"}}>
+                                I'm a Senior Software Engineer in Test and Technical Lead.
+                                I have over 6 years of experience in building testing frameworks and utilities,
+                                ranging from dashboards built with React, to containerized distributed
+                                systems running in AWS.
                             </p>
-                            <p className="style3">
-                                It&#39;s <strong>responsive</strong>, built on <strong>HTML5</strong> and <strong>CSS3</strong>&nbsp;
-                                and released for free under the <a href="http://html5up.net/license"> Creative Commons Attribution 3.0 license</a>&nbsp;
-                                so use it for any of your personal or commercial projects -- just be sure to credit us!
+                            <p className="style3" style={{marginBottom: "2em"}}>
+                                While I'm proficient as a full-stack engineer, I'm most experienced in building
+                                back-end services in object oriented languages and relational databases.
+                                My latest passion has been in learning as much as possible about cloud technologies,
+                                with a focus on serverless architectures.
                             </p>
+                            <p className="style3" style={{marginBottom: "2em"}}>
+                                When I'm not in front of the keyboard, I enjoy the gym,
+                                keeping up with the latest in hip-hop music, reading about personal finance, gaming,
+                                and spending time at the beach.
+                            </p>
+                            <ul class="actions">
+                                <li><Link to="/resume" className="button style3 big">View Resumé</Link></li>
+                            </ul>
                         </section>
                     </div>
                     {/* End Intro */}
-
-                    {/* Main */}
-                    <div className="wrapper style2">
-                        <div className="title">The Details</div>
-                        <div id="main" className="container">
-
-                            {/* Features */}
-                            <section id="features">
-                                <header className="style1">
-                                    <h2>Dolor consequat feugiat amet veroeros</h2>
-                                    <p>Feugiat dolor nullam orci pretium phasellus justo</p>
-                                </header>
-                                {/* Feature List */}
-                                <div className="feature-list">
-                                    <div className="row">
-                                        <div className="6u 12u(mobile)">
-                                            <section>
-                                                <h3 className="icon fa-comment">Mattis velit diam vulputate</h3>
-                                                <p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
-                                            </section>
-                                        </div>
-                                        <div className="6u 12u(mobile)">
-                                            <section>
-                                                <h3 className="icon fa-refresh">Lorem ipsum dolor sit veroeros</h3>
-                                                <p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
-                                            </section>
-                                        </div>
-                                    </div>
-                                    <div className="row">
-                                        <div className="6u 12u(mobile)">
-                                            <section>
-                                                <h3 className="icon fa-picture-o">Pretium phasellus justo lorem</h3>
-                                                <p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
-                                            </section>
-                                        </div>
-                                        <div className="6u 12u(mobile)">
-                                            <section>
-                                                <h3 className="icon fa-cog">Tempus sed pretium orci</h3>
-                                                <p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
-                                            </section>
-                                        </div>
-                                    </div>
-                                    <div className="row">
-                                        <div className="6u 12u(mobile)">
-                                            <section>
-                                                <h3 className="icon fa-wrench">Aliquam consequat et feugiat</h3>
-                                                <p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
-                                            </section>
-                                        </div>
-                                        <div className="6u 12u(mobile)">
-                                            <section>
-                                                <h3 className="icon fa-check">Dolore laoreet aliquam mattis</h3>
-                                                <p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
-                                            </section>
-                                        </div>
-                                    </div>
-                                </div>
-                                {/* End Feature List */}
-                            </section>
-                            {/* End Features */}
-
-                        </div>
-                    </div>
-                    {/* End Main */}
 
                     {/* Highlights */}
                     <div className="wrapper style3">

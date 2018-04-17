@@ -35,22 +35,16 @@ class Home extends Component {
                     <div id="intro-wrapper" className="wrapper style1">
                         <div className="title">Introduction</div>
                         <section id="intro" className="container">
-                            <p className="style3" style={{marginBottom: "2em"}}>
-                                I'm a Senior Software Engineer in Test and Technical Lead.
-                                I have over 6 years of experience in building testing frameworks and utilities,
+                            <p className="style1" style={{marginBottom: "2em"}}>
+                                A Senior Software Engineer in Test and Technical Lead with over 6 years 
+                                experience in building testing frameworks and utilities,
                                 ranging from dashboards built with React, to containerized distributed
                                 systems running in AWS.
                             </p>
-                            <p className="style3" style={{marginBottom: "2em"}}>
-                                While I'm proficient as a full-stack engineer, I'm most experienced in building
+                            <p className="style1" style={{marginBottom: "2em"}}>
+                                While proficient as a full-stack engineer, my primary experience is in building
                                 back-end services in object oriented languages and relational databases.
-                                My latest passion has been in learning as much as possible about cloud technologies,
-                                with a focus on serverless architectures.
-                            </p>
-                            <p className="style3" style={{marginBottom: "2em"}}>
-                                When I'm not in front of the keyboard, I enjoy the gym,
-                                keeping up with the latest in hip-hop music, reading about personal finance, gaming,
-                                and spending time at the beach.
+                                My latest passion is cloud technologies, with a focus on serverless architectures.
                             </p>
                             <ul class="actions">
                                 <li><Link to="/resume" className="button style3 big">View Resumé</Link></li>

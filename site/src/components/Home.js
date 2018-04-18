@@ -36,7 +36,7 @@ class Home extends Component {
                         <div className="title">Introduction</div>
                         <section id="intro" className="container">
                             <p className="style1" style={{marginBottom: "2em"}}>
-                                A Senior Software Engineer in Test and Technical Lead with over 6 years 
+                                Senior Software Engineer in Test and Technical Lead with over 6 years 
                                 experience in building testing frameworks and utilities,
                                 ranging from dashboards built with React, to containerized distributed
                                 systems running in AWS.

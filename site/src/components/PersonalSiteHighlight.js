@@ -5,16 +5,12 @@ import SiteArchImg from '../images/joeygryder-com.png';
 
 class PersonalSiteHighlight extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
-        const style = this.props.style;
+        const type = this.props.type;
 
         return (
-            <section className={style}>
-                {style == "box" &&
+            <section className={type}>
+                {type === "box" &&
                 <header>
                     <h2>joeygryder.com</h2>
                 </header>
@@ -22,7 +18,7 @@ class PersonalSiteHighlight extends Component {
                 <Link to="/personal-site" className="image featured">
                     <img src={SiteArchImg} alt="joeygryder-com-arch" />
                 </Link>
-                {style == "highlight" &&
+                {type === "highlight" &&
                 <h3><Link to="/personal-site">joeygryder.com</Link></h3>
                 }
                 <p>

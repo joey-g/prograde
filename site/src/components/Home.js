@@ -60,13 +60,13 @@ class Home extends Component {
                         <div id="highlights" className="container">
                             <div className="row 150%">
                                 <div className="4u 12u(mobile)">
-                                    <PersonalSiteHighlight style='highlight'/>
+                                    <PersonalSiteHighlight type='highlight'/>
                                 </div>
                                 <div className="4u 12u(mobile)">
-                                    <ReflexHighlight style='highlight'/>
+                                    <ReflexHighlight type='highlight'/>
                                 </div>
                                 <div className="4u 12u(mobile)">
-                                    <MobilePayHighlight style='highlight'/>
+                                    <MobilePayHighlight type='highlight'/>
                                 </div>
                             </div>
                         </div>

@@ -6,11 +6,11 @@ import ReflexRunDetailsImg from '../images/reflex-run-details.png';
 class ReflexHighlight extends Component {
 
     render() {
-        const style = this.props.style;
+        const type = this.props.type;
 
         return (
-            <section className={style}>
-                {style == "box" &&
+            <section className={type}>
+                {type === "box" &&
                 <header>
                     <h2>Automation Framework</h2>
                 </header>
@@ -18,7 +18,7 @@ class ReflexHighlight extends Component {
                 <Link to="/testing-framework" className="image featured">
                     <img src={ReflexRunDetailsImg} alt="testing-framework-details" />
                 </Link>
-                {style == "highlight" &&
+                {type === "highlight" &&
                 <h3><Link to="/testing-framework">Automation Framework</Link></h3>
                 }
                 <p>

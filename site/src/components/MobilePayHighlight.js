@@ -5,16 +5,12 @@ import MobilePayImg from '../images/mobile-pay-automation.png';
 
 class MobilePayHighlight extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
-        const style = this.props.style;
+        const type = this.props.type;
         
         return (
-            <section className={style}>
-                {style == "box" &&
+            <section className={type}>
+                {type === "box" &&
                 <header>
                     <h2>Mobile Automation</h2>
                 </header>
@@ -22,7 +18,7 @@ class MobilePayHighlight extends Component {
                 <Link to="/mobile-automation" className="image featured">
                     <img src={MobilePayImg} alt="mobile-automation" />
                 </Link>
-                {style == "highlight" &&
+                {type === "highlight" &&
                 <h3><Link to="/mobile-automation">Mobile Automation</Link></h3>
                 }
                 <p>

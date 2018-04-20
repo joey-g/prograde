@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
 
 import Footer from './Footer';
 import Nav from './Nav';
@@ -78,10 +77,10 @@ class PersonalSite extends Component {
                                 </article>
                                 <div className="row 150%">
                                     <div className="6u 12u(mobile)">
-                                        <ReflexHighlight style="box" />
+                                        <ReflexHighlight type="box" />
                                     </div>
                                     <div className="6u 12u(mobile)">
-                                        <MobilePayHighlight style="box" />
+                                        <MobilePayHighlight type="box" />
                                     </div>
                                 </div>
                             </div>

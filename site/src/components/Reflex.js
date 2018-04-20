@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
 
 import Footer from './Footer';
 import Nav from './Nav';
@@ -76,10 +75,10 @@ class Reflex extends Component {
                                 </article>
                                 <div className="row 150%">
                                     <div className="6u 12u(mobile)">
-                                        <PersonalSiteHighlight style="box" />
+                                        <PersonalSiteHighlight type="box" />
                                     </div>
                                     <div className="6u 12u(mobile)">
-                                        <MobilePayHighlight style="box" />
+                                        <MobilePayHighlight type="box" />
                                     </div>
                                 </div>
                             </div>

@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom'
 
 import Contact from './Contact';
 import Nav from './Nav';
-import MobilePayImg from '../images/mobile-pay-automation.png';
-import ReflexRunDetailsImg from '../images/reflex-run-details.png';
+
+import ReflexHighlight from './ReflexHighlight';
+import MobilePayHighlight from './MobilePayHighlight';
+
 import SiteArchImg from '../images/joeygryder-com.png';
 
 class PersonalSite extends Component {
@@ -76,36 +78,10 @@ class PersonalSite extends Component {
                                 </article>
                                 <div className="row 150%">
                                     <div className="6u 12u(mobile)">
-                                        <section className="box">
-                                            <header>
-                                                <h2>Automation Framework</h2>
-                                            </header>
-                                            <Link to="/testing-framework" className="image featured">
-                                                <img src={ReflexRunDetailsImg} alt="testing-framework-details" />
-                                            </Link>
-                                            <p>
-                                                Testing framework powering all automated testing for
-                                                &nbsp;<a href="https://boomtownroi.com/">BoomTown ROI</a>. Built on Cucumber,
-                                                &nbsp;<a href="https://saucelabs.com/">Sauce Labs</a>, Sinatra, React and Docker.
-                                            </p>
-                                            <Link to="/testing-framework" className="button style1">Learn More</Link>
-                                        </section>
+                                        <ReflexHighlight style="box" />
                                     </div>
                                     <div className="6u 12u(mobile)">
-                                        <section className="box">
-                                            <header>
-                                                <h2>Mobile Automation</h2>
-                                            </header>
-                                            <Link to="/mobile-automation" className="image featured">
-                                                <img src={MobilePayImg} alt="mobile-automation" />
-                                            </Link>
-                                            <p>
-                                                Hybrid app automation for&nbsp;<a href="https://www.blackbaud.com/">Blackbaud</a>'s
-                                                Mobile Payments platform. Built with &nbsp;<a href="http://appium.io/">Appium</a>,
-                                                &nbsp;Selenium Grid, and NodeJS.
-                                            </p>
-                                            <Link to="/mobile-automation" className="button style1">Learn More</Link>
-                                        </section>
+                                        <MobilePayHighlight style="box" />
                                     </div>
                                 </div>
                             </div>

@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom'
 
 import Contact from './Contact';
 import Nav from './Nav';
+
+import PersonalSiteHighlight from './PersonalSiteHighlight';
+import ReflexHighlight from './ReflexHighlight';
+
 import MobilePayImg from '../images/mobile-pay-automation.png';
-import ReflexRunDetailsImg from '../images/reflex-run-details.png';
-import SiteArchImg from '../images/joeygryder-com.png';
 
 class MobilePay extends Component {
 
@@ -74,35 +76,10 @@ class MobilePay extends Component {
                                 </article>
                                 <div className="row 150%">
                                     <div className="6u 12u(mobile)">
-                                        <section className="box">
-                                            <header>
-                                                <h2>joeygryder.com</h2>
-                                            </header>
-                                            <Link to="/personal-site" className="image featured">
-                                                <img src={SiteArchImg} alt="joeygryder-com-arch" />
-                                            </Link>
-                                            <p>
-                                                The site you're viewing. Built with React, AWS, the Serverless Framework, and theming by
-                                                &nbsp;<a href="https://html5up.net/">HTML5 UP</a>.
-                                            </p>
-                                            <Link to="/personal-site" className="button style1">Learn More</Link>
-                                        </section>
+                                        <PersonalSiteHighlight style="box"/>
                                     </div>
                                     <div className="6u 12u(mobile)">
-                                        <section className="box">
-                                            <header>
-                                                <h2>Automation Framework</h2>
-                                            </header>
-                                            <Link to="/testing-framework" className="image featured">
-                                                <img src={ReflexRunDetailsImg} alt="testing-framework-details" />
-                                            </Link>
-                                            <p>
-                                                Testing framework powering all automated testing for
-                                                &nbsp;<a href="https://boomtownroi.com/">BoomTown ROI</a>. Built on Cucumber, 
-                                                &nbsp;<a href="https://saucelabs.com/">Sauce Labs</a>, Sinatra, React and Docker.
-                                            </p>
-                                            <Link to="/testing-framework" className="button style1">Learn More</Link>
-                                        </section>
+                                        <ReflexHighlight style="box"/>
                                     </div>
                                 </div>
                             </div>

@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom'
 
 import Contact from './Contact';
 import Nav from './Nav';
-import MobilePayImg from '../images/mobile-pay-automation.png';
+
+import PersonalSiteHighlight from './PersonalSiteHighlight';
+import MobilePayHighlight from './MobilePayHighlight';
+
 import ReflexRunDetailsImg from '../images/reflex-run-details.png';
-import SiteArchImg from '../images/joeygryder-com.png';
 
 class Reflex extends Component {
 
@@ -74,35 +76,10 @@ class Reflex extends Component {
                                 </article>
                                 <div className="row 150%">
                                     <div className="6u 12u(mobile)">
-                                        <section className="box">
-                                            <header>
-                                                <h2>joeygryder.com</h2>
-                                            </header>
-                                            <Link to="/personal-site" className="image featured">
-                                                <img src={SiteArchImg} alt="joeygryder-com-arch" />
-                                            </Link>
-                                            <p>
-                                                The site you're viewing. Built with React, AWS, the Serverless Framework, and theming by
-                                                &nbsp;<a href="https://html5up.net/">HTML5 UP</a>.
-                                            </p>
-                                            <Link to="/personal-site" className="button style1">Learn More</Link>
-                                        </section>
+                                        <PersonalSiteHighlight style="box" />
                                     </div>
                                     <div className="6u 12u(mobile)">
-                                        <section className="box">
-                                            <header>
-                                                <h2>Mobile Automation</h2>
-                                            </header>
-                                            <Link to="/mobile-automation" className="image featured">
-                                                <img src={MobilePayImg} alt="mobile-automation" />
-                                            </Link>
-                                            <p>
-                                                Hybrid app automation for&nbsp;<a href="https://www.blackbaud.com/">Blackbaud</a>'s 
-                                                Mobile Payments platform. Built with &nbsp;<a href="http://appium.io/">Appium</a>,
-                                                &nbsp;Selenium Grid, and NodeJS.
-                                            </p>
-                                            <Link to="/mobile-automation" className="button style1">Learn More</Link>
-                                        </section>
+                                        <MobilePayHighlight style="box" />
                                     </div>
                                 </div>
                             </div>

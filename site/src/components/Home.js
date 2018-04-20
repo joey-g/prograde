@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import Contact from './Contact';
+import Footer from './Footer';
 import Nav from './Nav';
 
 import PersonalSiteHighlight from './PersonalSiteHighlight';
@@ -73,31 +73,7 @@ class Home extends Component {
                     </div>
                     {/* End Highlights */}
 
-                    {/* Footer */}
-                    <div id="footer-wrapper" className="wrapper">
-                        <div className="title">Contact</div>
-                        <div id="footer" className="container">
-                            <header className="style1">
-                                <h2>Get in touch</h2>
-                                <p>
-                                    Interested in working together? Hit me up in the form below or shoot me
-                                    an e-mail with more information about your project and I'll get back to
-                                    you as soon as I can!
-                                </p>
-                            </header>
-                            <hr />
-                            <Contact />
-                            <hr />
-                        </div>
-                        <div id="copyright">
-                            <ul>
-                                <li>Joey Gryder &copy; {(new Date()).getFullYear()}</li>
-                                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    {/* End Footer */}
-
+                    <Footer />
                 </div>
             </div >
         );

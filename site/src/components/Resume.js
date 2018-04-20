@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Document, Page } from 'react-pdf';
 
-import ResumePDF from '../images/resume.pdf';
-import Contact from './Contact';
+import Footer from './Footer';
 import Nav from './Nav';
+
+import ResumePDF from '../images/resume.pdf';
 
 class Resume extends Component {
 
@@ -82,22 +83,7 @@ class Resume extends Component {
                     </div>
                     {/* End Main */}
 
-                    {/* Footer */}
-                    <div id="footer-wrapper" className="wrapper">
-                        <div className="title">Contact</div>
-                        <div id="footer" className="container">
-                            <Contact />
-                            <hr />
-                        </div>
-                        <div id="copyright">
-                            <ul>
-                                <li>Joey Gryder &copy; {(new Date()).getFullYear()}</li>
-                                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    {/* End Footer */}
-
+                    <Footer />
                 </div>
             </div>
         );

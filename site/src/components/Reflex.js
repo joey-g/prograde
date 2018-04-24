@@ -18,7 +18,7 @@ class Reflex extends Component {
                     <div id="header-wrapper" className="wrapper">
                         <div id="header">
 
-                            <Nav/>
+                            <Nav />
 
                             {/* Logo */}
                             <div id="logo">
@@ -32,46 +32,35 @@ class Reflex extends Component {
                     <div className="wrapper style2">
                         <div className="title">Testing Framework</div>
                         <div id="main" className="container">
-                            
+
                             {/* Content */}
                             <div id="content">
                                 <article className="box post">
                                     <header className="style1">
-                                        <h2>Lorem ipsum dolor sit amet magna egestas morbi bibendum sed malesuada</h2>
-                                        <p>Tempus feugiat veroeros sed nullam dolore</p>
+                                        <h2>Test Automation Framework</h2>
+                                        <p>
+                                            Framework powering all automated testing for BoomTown ROI. Built on Cucumber,
+                                            Sauce Labs, Sinatra, React and Docker.
+                                        </p>
                                     </header>
                                     <div className="image featured">
                                         <img src={ReflexRunDetailsImg} alt="testing-framework-details" />
                                     </div>
-                                    <p>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget.
-                                    odio eleifend. Duis commodo fringilla commodo. Aliquam erat volutpat. Vestibulum
-                                    facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
-                                    tempus euismod. Vestibulum ante ipsum primis in faucibus.</p>
-                                    <p>Phasellus nisl nisl, varius id porttitor sed, pellentesque ac orci. Pellentesque
-                                    habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi
-                                    bibendum justo sed mauris vehicula malesuada aliquam elit imperdiet. Aliquam eu nibh
-                                    lorem, eget gravida mi. Duis odio diam, luctus et vulputate vitae, vehicula ac dolor.
-                                    Pellentesque at urna eget tellus lobortis ultrices sed non erat. Donec eget erat non
-                                    magna volutpat malesuada quis eget eros. Nullam sodales cursus sapien, id consequat
-                                    leo suscipit ut. Praesent id turpis vitae turpis pretium ultricies. Vestibulum sit
-                                    amet risus elit.</p>
-                                    <p>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra
-                                    ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
-                                    eget quam rutrum bibendum. Proin pellentesque diam non ligula commodo tempor. Vivamus
-                                    eget urna nibh. Curabitur non fringilla nisl. Donec accumsan interdum nisi, quis
-                                    tincidunt felis sagittis eget. Donec elementum ligula dignissim sem pulvinar non semper
-                                    odio eleifend. Duis commodo fringilla commodo. Aliquam erat volutpat. Vestibulum
-                                    facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
-                                    tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-                                    posuere cubilia.</p>
-                                    <p>Phasellus nisl nisl, varius id porttitor sed, pellentesque ac orci. Pellentesque
-                                    habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi
-                                    bibendum justo sed mauris vehicula malesuada aliquam elit imperdiet. Aliquam eu nibh
-                                    lorem, eget gravida mi. Duis odio diam, luctus et vulputate vitae, vehicula ac dolor.
-                                    Pellentesque at urna eget tellus lobortis ultrices sed non erat. Donec eget erat non
-                                    magna volutpat malesuada quis eget eros. Nullam sodales cursus sapien, id consequat
-                                    leo suscipit ut. Praesent id turpis vitae turpis pretium ultricies. Vestibulum sit
-                                    amet risus elit.</p>
+                                    <p>
+                                        Before I joined &nbsp;<a href="https://boomtownroi.com/">BoomTown ROI</a> as a Sr. SET, 
+                                        the team had historically built one-off testing scripts that were executed manually 
+                                        before a release. These scripts were often built in disparate languages and testing 
+                                        frameworks, with no standardized process for execution, storage, or reporting of 
+                                        testing results.
+                                    </p>
+                                    <p>
+                                        After joining the team, I implemented a testing framework that utilizes Cucumber as its
+                                        core execution and reporting engine. By standardizing all tests around Cucumber, this 
+                                        provided a common language for the team to use when communicating ideas to any stakeholders 
+                                        on a given project. This also provided a common, repeatable workflow for testers to use when 
+                                        going from building a test locally, through to running their new tests against the full 
+                                        framework.
+                                    </p>
                                 </article>
                                 <div className="row 150%">
                                     <div className="6u 12u(mobile)">

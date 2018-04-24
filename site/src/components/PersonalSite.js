@@ -38,24 +38,26 @@ class PersonalSite extends Component {
                                 <article className="box post">
                                     <header className="style1">
                                         <h2>Personal Portfolio Site</h2>
-                                        <p>The site you're viewing. Built with React, AWS, the Serverless Framework, and theming by
-                                            &nbsp;<a href="https://html5up.net/">HTML5 UP</a>.</p>
+                                        <p>
+                                            The site you're viewing. Built with React, AWS, the Serverless Framework,
+                                            and theming by HTML5 UP.
+                                        </p>
                                     </header>
                                     <div className="image featured">
                                         <img src={SiteArchImg} alt="joeygryder-com-arch" />
                                     </div>
                                     <p>
-                                        When setting out to put together a personal portfolio site, I opted to
-                                        build everything from the ground up to get more experience in some of the technologies
-                                        I'm interested in. This included React for the front-end of the site, coupled
+                                        When setting out to build a personal portfolio site, I decided to
+                                        build everything from the ground up to gain more experience in some of the technologies
+                                        I've been interested in. This included React for the front-end of the site, coupled
                                         with various AWS PaaS offerings.
                                     </p>
                                     <p>
-                                        As I'm currently fascinated with the serverless architecture movemement, I opted to
+                                        As I'm fascinated with the serverless architecture movemement, I opted to
                                         implement the site's contact form with the &nbsp;
                                         <a href="https://serverless.com/">Serverless Framework</a>. This provided me with a
                                         quick way to spin up an endpoint on the AWS API Gateway, sitting in front of a single
-                                        Lambda function that simply routes POSTed contact form requests to my personal e-mail
+                                        Lambda function that routes POSTed contact form requests to my personal e-mail
                                         through the AWS Simple E-mail Service. For more details, check out the
                                         contact-service portion of this site's repo at:&nbsp;
                                         <a href="https://github.com/joey-g/prograde/tree/master/contact-service">

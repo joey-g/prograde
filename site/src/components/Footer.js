@@ -9,6 +9,7 @@ class Footer extends Component {
             <div id="footer-wrapper" className="wrapper">
                 <div className="title">Contact</div>
                 <div id="footer" className="container">
+                    {this.props.header}
                     <Contact />
                     <hr />
                 </div>

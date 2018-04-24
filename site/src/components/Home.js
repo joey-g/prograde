@@ -36,13 +36,13 @@ class Home extends Component {
                     <div id="intro-wrapper" className="wrapper style1">
                         <div className="title">Introduction</div>
                         <section id="intro" className="container">
-                            <p className="style1" style={{marginBottom: "2em"}}>
-                                Senior Software Engineer in Test and Technical Lead with over 6 years 
+                            <p className="style1" style={{ marginBottom: "2em" }}>
+                                Senior Software Engineer in Test and Technical Lead with over 6 years
                                 experience in building testing frameworks and utilities,
                                 ranging from dashboards built with React, to containerized distributed
                                 systems running in AWS.
                             </p>
-                            <p className="style1" style={{marginBottom: "2em"}}>
+                            <p className="style1" style={{ marginBottom: "2em" }}>
                                 While proficient as a full-stack engineer, my primary experience is in building
                                 back-end services in object oriented languages and relational databases.
                                 My latest passion is cloud technologies, with a focus on serverless architectures.
@@ -60,22 +60,34 @@ class Home extends Component {
                         <div id="highlights" className="container">
                             <div className="row 150%">
                                 <div className="4u 12u(mobile)">
-                                    <PersonalSiteHighlight type='highlight'/>
+                                    <PersonalSiteHighlight type="highlight" />
                                 </div>
                                 <div className="4u 12u(mobile)">
-                                    <ReflexHighlight type='highlight'/>
+                                    <ReflexHighlight type="highlight" />
                                 </div>
                                 <div className="4u 12u(mobile)">
-                                    <MobilePayHighlight type='highlight'/>
+                                    <MobilePayHighlight type="highlight" />
                                 </div>
                             </div>
                         </div>
                     </div>
                     {/* End Highlights */}
 
-                    <Footer />
+                    <Footer header={
+                        <div>
+                            <header className="style1">
+                                <h2>Get in touch</h2>
+                                <p>
+                                    Interested in working together? Hit me up in the form below or shoot me
+                                    an e-mail with more information about your project and I'll get back to
+                                    you as soon as I can!
+                                </p>
+                            </header>
+                            <hr />
+                        </div>
+                    } />
                 </div>
-            </div >
+            </div>
         );
     }
 }

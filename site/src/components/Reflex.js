@@ -62,7 +62,7 @@ class Reflex extends Component {
                                 <p>
                                     The framework is built upon the following technologies:
                                 </p>
-                                <h4>RESTful Web Service Built in Sinatra</h4>
+                                <h4 className="details-header">RESTful Web Service Built in Sinatra</h4>
                                 <p>
                                     Sitting at the core of the framework is a &nbsp;
                                     <a href="https://github.com/sinatra/sinatra">Sinatra</a>-based RESTful web service
@@ -70,13 +70,13 @@ class Reflex extends Component {
                                     for previous jobs, and provide CRUD operations on various test configuration tables. The
                                     service is deployed as a Docker container to Amazon's ECS.
                                 </p>
-                                <h4>MySQL and DynamoDB Datastores</h4>
+                                <h4 className="details-header">MySQL and DynamoDB Datastores</h4>
                                 <p>
                                     For the storage of all historical test runs, we utilize a MySQL database hosted in
                                     Amazon RDS. For non-relational data, such as the details of a currently executing test
                                     job, we utilize Amazon's DynamoDB.
                                 </p>
-                                <h4>Containerized Cucumber Job Runners</h4>
+                                <h4 className="details-header">Containerized Cucumber Job Runners</h4>
                                 <p>
                                     The actual execution of tests through the Cucumber binary is handled with a
                                     batch-processing architecture to improve test parallelization and decrease total test
@@ -84,7 +84,7 @@ class Reflex extends Component {
                                     Docker container to Amazon ECS. These test runners then poll a queue for Cucumber jobs
                                     to execute.
                                 </p>
-                                <h4>Front-end Dashboard Built in React</h4>
+                                <h4 className="details-header">Front-end Dashboard Built in React</h4>
                                 <p>
                                     To provide an interface for users to start new tests and investigate the results of
                                     previous runs, I implemented a dashboard in React that sits atop the Sinatra web

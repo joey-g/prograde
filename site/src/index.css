@@ -25,3 +25,9 @@
 .dropotron li a {
     display: block;
 }
+
+.details-header {
+    font-size: .91em;
+    color: #717479;
+    font-weight: 600;
+}

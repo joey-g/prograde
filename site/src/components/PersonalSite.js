@@ -46,7 +46,7 @@ class PersonalSite extends Component {
                                     <img src={SiteArchImg} alt="joeygryder-com-arch" />
                                 </div>
                                 <p>
-                                    When setting out to build a personal portfolio site, I decided to
+                                    When setting out to create a personal portfolio site, I decided to
                                     build everything from the ground up to gain more experience in some of the technologies
                                     I've been interested in. This included React for the front-end of the site, coupled
                                     with various AWS PaaS offerings.
@@ -65,8 +65,8 @@ class PersonalSite extends Component {
                                     </a>
                                 </p>
                                 <p>
-                                    For the front-end portion of the project, I decided to convert one of the single-page
-                                    HTML5 + CSS3 sites from &nbsp;<a href="https://html5up.net/">HTML5 UP</a> into a
+                                    For the front-end portion of the project, I converted one of the single-page
+                                    HTML5 + CSS3 templates from &nbsp;<a href="https://html5up.net/">HTML5 UP</a> into a
                                     multi-page componentized React application. I started with a blank React foundation from
                                     Facebook's &nbsp;<a href="https://github.com/facebook/create-react-app">create-react-app</a>
                                     &nbsp;and eventually added in react-router-dom, along with packages for Google Analytics

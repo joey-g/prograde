@@ -58,7 +58,8 @@ class PersonalSite extends Component {
                                     quick way to spin up an endpoint on the AWS API Gateway, sitting in front of a single
                                     Lambda function that routes POSTed contact form requests to my personal e-mail
                                     through the AWS Simple E-mail Service. For more details, check out the
-                                    contact-service portion of this site's repo at:&nbsp;
+                                    contact-service portion of this site's repo at:
+                                    <br />
                                     <a href="https://github.com/joey-g/prograde/tree/master/contact-service">
                                         https://github.com/joey-g/prograde/tree/master/contact-service
                                     </a>
@@ -70,7 +71,8 @@ class PersonalSite extends Component {
                                     Facebook's &nbsp;<a href="https://github.com/facebook/create-react-app">create-react-app</a>
                                     &nbsp;and eventually added in react-router-dom, along with packages for Google Analytics
                                     and PDF rendering. The site is hosted out of AWS S3, with a CloudFront CDN distribution
-                                    serving files from edge locations and Route 53 handling DNS. For more details, see:&nbsp;
+                                    serving files from edge locations and Route 53 handling DNS. For more details, see:
+                                    <br />
                                     <a href="https://github.com/joey-g/prograde/tree/master/site">
                                         https://github.com/joey-g/prograde/tree/master/site
                                     </a>

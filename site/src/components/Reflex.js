@@ -91,6 +91,7 @@ class Reflex extends Component {
                                     service. The dashboard is hosted as a static site out of Amazon S3.
                                 </p>
                             </article>
+                            <hr />
                             <div className="row 150%">
                                 <div className="6u 12u(mobile)">
                                     <PersonalSiteHighlight type="box" />

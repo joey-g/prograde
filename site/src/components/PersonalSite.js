@@ -78,6 +78,7 @@ class PersonalSite extends Component {
                                     </a>
                                 </p>
                             </article>
+                            <hr />
                             <div className="row 150%">
                                 <div className="6u 12u(mobile)">
                                     <ReflexHighlight type="box" />

@@ -72,6 +72,7 @@ class MobilePay extends Component {
                                 leo suscipit ut. Praesent id turpis vitae turpis pretium ultricies. Vestibulum sit
                                 amet risus elit.</p>
                             </article>
+                            <hr />
                             <div className="row 150%">
                                 <div className="6u 12u(mobile)">
                                     <PersonalSiteHighlight type="box"/>

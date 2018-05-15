@@ -81,8 +81,8 @@ class Reflex extends Component {
                                     The actual execution of tests through the Cucumber binary is handled with a
                                     batch-processing architecture to improve test parallelization and decrease total test
                                     run times. Each test runner is built as a small Ruby application and is deployed in a
-                                    Docker container to Amazon ECS. These test runners then poll a queue for Cucumber jobs
-                                    to execute.
+                                    Docker container to Amazon ECS. These test runners continuously poll a queue for Cucumber 
+                                    jobs to execute.
                                 </p>
                                 <h4 className="details-header">Front-end Dashboard Built in React</h4>
                                 <p>

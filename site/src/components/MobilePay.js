@@ -17,7 +17,7 @@ class MobilePay extends Component {
                 <div id="header-wrapper" className="wrapper">
                     <div id="header">
 
-                        <Nav/>
+                        <Nav />
 
                         {/* Logo */}
                         <div id="logo">
@@ -31,13 +31,16 @@ class MobilePay extends Component {
                 <div className="wrapper style2">
                     <div className="title">Mobile Automation</div>
                     <div id="main" className="container">
-                        
+
                         {/* Content */}
                         <div id="content">
                             <article className="box post">
                                 <header className="style1">
-                                    <h2>Lorem ipsum dolor sit amet magna egestas morbi bibendum sed malesuada</h2>
-                                    <p>Tempus feugiat veroeros sed nullam dolore</p>
+                                    <h2>Mobile Automation Lab</h2>
+                                    <p>
+                                        Hybrid app automation lab for Blackbaud's Mobile Payments platform. Built with 
+                                        Appium, Selenium Grid, and NodeJS.
+                                    </p>
                                 </header>
                                 <div className="image featured">
                                     <img src={MobilePayImg} alt="mobile-automation" />
@@ -75,10 +78,10 @@ class MobilePay extends Component {
                             <hr />
                             <div className="row 150%">
                                 <div className="6u 12u(mobile)">
-                                    <PersonalSiteHighlight type="box"/>
+                                    <PersonalSiteHighlight type="box" />
                                 </div>
                                 <div className="6u 12u(mobile)">
-                                    <ReflexHighlight type="box"/>
+                                    <ReflexHighlight type="box" />
                                 </div>
                             </div>
                         </div>

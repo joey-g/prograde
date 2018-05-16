@@ -46,18 +46,19 @@ class Reflex extends Component {
                                     <img src={ReflexRunDetailsImg} alt="testing-framework-details" />
                                 </div>
                                 <p>
-                                    Before I joined &nbsp;<a href="https://boomtownroi.com/">BoomTown ROI</a> as a Sr.
-                                    Software Engineer in Test, the team had historically built one-off testing scripts
-                                    that were executed manually before a release. These scripts were often built in
-                                    disparate languages and testing frameworks, with no standardized process for
-                                    execution, storage, or reporting of testing results.
+                                    I joined &nbsp;<a href="https://boomtownroi.com/">BoomTown ROI</a> as a Sr.
+                                    Software Engineer in Test in 2014, just as the Quality Assurance team was 
+                                    beginning to transition away from full-time manual testing and into Continuous 
+                                    Integration and automated testing. I was tasked with building a testing framework
+                                    for the team, and was instrumental in developing a QA Engineering team to
+                                    support this initiative.
                                 </p>
                                 <p>
-                                    After joining the team, I implemented a testing framework that utilizes Cucumber as its
-                                    core execution and reporting engine. By standardizing all tests around Cucumber, this
-                                    provided a common language for the team to use when communicating ideas to stakeholders
-                                    on a given project. This also provided a repeatable workflow for testers to use when
-                                    going from building a test locally to running their new tests against the full framework.
+                                    The testing framework utilizes Cucumber as its core execution and reporting engine. By 
+                                    standardizing all tests around Cucumber, this provides a common language for the team 
+                                    to use when communicating ideas to stakeholders on a given project. This also provides 
+                                    a repeatable workflow for QA engineers to use when moving between building a test 
+                                    locally to executing their new tests against the full framework.
                                 </p>
                                 <p>
                                     The framework is built upon the following technologies:

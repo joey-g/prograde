@@ -38,42 +38,32 @@ class MobilePay extends Component {
                                 <header className="style1">
                                     <h2>Mobile Automation Lab</h2>
                                     <p>
-                                        Hybrid app automation lab for Blackbaud's Mobile Payments platform. Built with 
+                                        Hybrid-app automation lab for Blackbaud's Mobile Payments platform. Built with 
                                         Appium, Selenium Grid, and NodeJS.
                                     </p>
                                 </header>
                                 <div className="image featured">
                                     <img src={MobilePayImg} alt="mobile-automation" />
                                 </div>
-                                <p>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget.
-                                odio eleifend. Duis commodo fringilla commodo. Aliquam erat volutpat. Vestibulum
-                                facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
-                                tempus euismod. Vestibulum ante ipsum primis in faucibus.</p>
-                                <p>Phasellus nisl nisl, varius id porttitor sed, pellentesque ac orci. Pellentesque
-                                habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi
-                                bibendum justo sed mauris vehicula malesuada aliquam elit imperdiet. Aliquam eu nibh
-                                lorem, eget gravida mi. Duis odio diam, luctus et vulputate vitae, vehicula ac dolor.
-                                Pellentesque at urna eget tellus lobortis ultrices sed non erat. Donec eget erat non
-                                magna volutpat malesuada quis eget eros. Nullam sodales cursus sapien, id consequat
-                                leo suscipit ut. Praesent id turpis vitae turpis pretium ultricies. Vestibulum sit
-                                amet risus elit.</p>
-                                <p>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra
-                                ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
-                                eget quam rutrum bibendum. Proin pellentesque diam non ligula commodo tempor. Vivamus
-                                eget urna nibh. Curabitur non fringilla nisl. Donec accumsan interdum nisi, quis
-                                tincidunt felis sagittis eget. Donec elementum ligula dignissim sem pulvinar non semper
-                                odio eleifend. Duis commodo fringilla commodo. Aliquam erat volutpat. Vestibulum
-                                facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
-                                tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-                                posuere cubilia.</p>
-                                <p>Phasellus nisl nisl, varius id porttitor sed, pellentesque ac orci. Pellentesque
-                                habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi
-                                bibendum justo sed mauris vehicula malesuada aliquam elit imperdiet. Aliquam eu nibh
-                                lorem, eget gravida mi. Duis odio diam, luctus et vulputate vitae, vehicula ac dolor.
-                                Pellentesque at urna eget tellus lobortis ultrices sed non erat. Donec eget erat non
-                                magna volutpat malesuada quis eget eros. Nullam sodales cursus sapien, id consequat
-                                leo suscipit ut. Praesent id turpis vitae turpis pretium ultricies. Vestibulum sit
-                                amet risus elit.</p>
+                                <p>
+                                    As part of the Payment Services team at <a href="https://www.blackbaud.com/">Blackbaud</a>,
+                                    I acted as the group's subject matter expert on UI automation with Selenium WebDriver. 
+                                    When the team began to move into the Mobile Payments space, I was responsible for 
+                                    implementing a local testing lab for exercising a new hybrid mobile app, containing
+                                    native code built with&nbsp;<a href="https://www.appcelerator.com/">Appcelerator</a>, 
+                                    and a hosted web view.
+                                </p>
+                                <p>
+                                    I implemented this testing lab using&nbsp;
+                                    <a href="https://www.seleniumhq.org/docs/07_selenium_grid.jsp">Selenium Grid</a>,
+                                    with a single host 'controller' and a stack of Mac Minis, each hosting 'worker' nodes of 
+                                    Selenium-server attached to multiple&nbsp;<a href="http://appium.io/">Appium</a>&nbsp;
+                                    processes. Appium served as the final interface between the requested WebDriver API calls
+                                    and the executed UI actions on the&nbsp;
+                                    <a href="https://www.blackbaud.com/bbms/mobilepay">MobilePay</a> application. The final 
+                                    solution allowed the team to execute up to six test scenarios in parallel, distributed 
+                                    across multiple Operating Systems on both physical and emulated devices.
+                                </p>
                             </article>
                             <hr />
                             <div className="row 150%">

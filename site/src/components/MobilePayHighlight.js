@@ -22,7 +22,7 @@ class MobilePayHighlight extends Component {
                 <h3><Link to="/mobile-automation">Mobile Automation</Link></h3>
                 }
                 <p>
-                    Hybrid app automation lab for&nbsp;<a href="https://www.blackbaud.com/">Blackbaud</a>'s
+                    Hybrid-app automation lab for&nbsp;<a href="https://www.blackbaud.com/">Blackbaud</a>'s
                     Mobile Payments platform. Built with &nbsp;<a href="http://appium.io/">Appium</a>,
                     &nbsp;Selenium Grid, and NodeJS.
                 </p>

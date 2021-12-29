@@ -57,7 +57,7 @@ class App extends Component {
 						</ul>
 						<Link to="/resume" className="link depth-0"
 							style={{ WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)' }}>
-							<span className="indent-0"></span>Resumé
+							<span className="indent-0"></span>Résumé
 						</Link>
 					</nav>				
 				</div>

@@ -49,7 +49,7 @@ class Home extends Component {
                                 My latest passion is cloud technologies, with a focus on serverless architectures.
                             </p>
                             <ul class="actions">
-                                <li><Link to="/resume" className="button style3 big">View Resumé</Link></li>
+                                <li><Link to="/resume" className="button style3 big">View Résumé</Link></li>
                             </ul>
                         </section>
                     </div>

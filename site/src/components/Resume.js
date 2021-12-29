@@ -55,14 +55,14 @@ class Resume extends Component {
 
                 {/* Main */}
                 <div className="wrapper style2">
-                    <div className="title">Resumé</div>
+                    <div className="title">Résumé</div>
                     <div id="main" className="container">
 
                         {/* Content */}
                         <div id="content">
                             <div id="pdfWrapper" style={{ width: "100%" }}
                                 ref={(ref) => this.pdfWrapper = ref}>
-                                <Document file={ResumePDF} loading={'Loading resumé...'}
+                                <Document file={ResumePDF} loading={'Loading résumé...'}
                                     onLoadSuccess={this.onDocumentLoad}>
                                     <Page width={width} pageNumber={pageNumber} />
                                 </Document>

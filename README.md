@@ -25,7 +25,7 @@ To deploy a new version of the contact web service:
 
 To build and deploy a new version of the React app:
 ```
-/site$ npm build
+/site$ npm run build
 /site$ npm run deploy
 ```
 

@@ -26,8 +26,8 @@ class Home extends Component {
                             <div id="logo">
                                 <img src={HeadshotImg} alt="headshot" />
                                 <h1>Joey Gryder</h1>
-                                <p>Sr. Software Engineer &#38; Technical Lead</p>
-                                <p>Charleston, SC</p>
+                                <p>Sr. Software Engineer</p>
+                                <p>Mt. Pleasant, SC</p>
                             </div>
                         </div>
                     </div>
@@ -39,9 +39,8 @@ class Home extends Component {
                         <section id="intro" className="container">
                             <p className="style1" style={{ marginBottom: "2em" }}>
                                 Senior Software Engineer and Technical Lead with over 10 years
-                                experience in building .NET Framework applications in C#,
-                                ranging from high performance ASP.NET Core web services, to 
-                                containerized distributed systems running in AWS.
+                                experience in building applications ranging from high performance 
+                                web services, to containerized distributed systems running in AWS.
                             </p>
                             <p className="style1" style={{ marginBottom: "2em" }}>
                                 While proficient as a full-stack engineer, my primary experience is in building
